@@ -2,6 +2,8 @@ import React from 'react';
 import Icon from '../../reusables/components/Icon.jsx';
 
 export default function IconNavBar(props) {
+  /*Si se envía un contenido "name" se renderizaró un componente
+    con más propiedades*/
   if (!props.name) {
     return (
       <a
@@ -14,6 +16,7 @@ export default function IconNavBar(props) {
       </a>
     );
   } else {
+    //La función de NavBar cortará el id hasta el carácter del "-"
     return (
       <a
         id={`a-${props.name}`}

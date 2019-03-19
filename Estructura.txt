@@ -1,0 +1,17 @@
+SISTEMA
+  -> Main
+    -> Login
+      ->Image
+      ->Formulario
+
+    (Si Ingresa credenciales correctas)
+    -> Home
+      -> NavBar
+        -> LayoutSection
+          -> Iconos
+      -> UserBar
+        -> Image
+        -> Search
+        -> Notification
+        -> UserData
+      ->Data
