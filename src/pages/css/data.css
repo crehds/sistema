@@ -1,0 +1,17 @@
+.Data {
+  /* border:2px solid green; */
+  width: 100%;
+  background: rgba(200,200,200);
+  /* max-height: 100%; */
+}
+
+.logo {
+  height: 100%;
+  width: 100%;
+  font-size: 35px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  padding-left: 4px;
+}

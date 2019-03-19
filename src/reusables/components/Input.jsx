@@ -5,8 +5,9 @@ export default function Input(props) {
     <input
       className={props.class}
       type={props.type}
-      onSubmit={props.submit}
       ref={props.inputRef}
+      name={props.name}
+      placeholder={props.place}
     />
   );
 }

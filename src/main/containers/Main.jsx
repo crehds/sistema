@@ -1,20 +1,25 @@
 import React, { Component } from 'react';
+
 import LayoutSection from '../../reusables/components/LayoutSection.jsx';
+
 import Login from '../../login/containers/Login.jsx';
+import Home from '../../pages/containers/Home.jsx';
+
+import '../css/main.css';
 
 class Main extends Component {
 
   state = {
-    isLogging: false,
+    isLogging: true,
   };
 
-  addClassMain = ({ isLogging }) => {
+  addClassMain = (isLogging) => {
     var d = document.getElementById('Main');
 
     if (isLogging == false) {
       d.classList.add('Login');
     } else {
-      if (d.classList.containes('Login')) {
+      if (d.classList.contains('Login')) {
         d.classList.remove('Login');
       }
 
@@ -23,7 +28,7 @@ class Main extends Component {
   };
 
   componentDidMount() {
-    this.addClassMain(this.state);
+    this.addClassMain(this.state.isLogging);
   }
 
   handleLoggin = (bool) => {
@@ -33,6 +38,7 @@ class Main extends Component {
       this.setState({
         isLogging: true,
       });
+      this.addClassMain(true);
     }
   };
 
@@ -49,7 +55,7 @@ class Main extends Component {
           handleLoggin={this.handleLoggin}
         />
         :
-        <div>En desarrollo</div>
+        <Home/>
       }
 
       </LayoutSection>
