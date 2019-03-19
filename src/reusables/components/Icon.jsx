@@ -7,6 +7,8 @@ export default function Icon(props) {
       id={props.name}
       className={props.class}
       title={props.name}
+      ref={props.setIRef}
+      onClick={props.function}
     >
     </i>
   );

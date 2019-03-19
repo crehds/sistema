@@ -27,12 +27,12 @@ class UserData extends Component {
         <Icon
           class="icon-user image"
         />
-        <div>Alonso</div>
-        <div>Administrador</div>
+        <div>Claudia</div>
+        <div>Administradora</div>
         <Icon
           class="icon-keyboard_arrow_down arrow"
-          setArrowRef={this.setArrowRef}
-          handleArrow={this.handleArrow}
+          setIRef={this.setArrowRef}
+          function={this.handleArrow}
         />
         {this.state.isOpen &&
           <LayoutDiv class="login">
