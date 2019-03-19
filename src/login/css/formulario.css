@@ -1,0 +1,14 @@
+.Formulario {
+  margin-top:60px;
+  font-size: 15px;
+}
+.Formulario p {
+  margin: 8px;
+}
+.formulario-input {
+  border-radius: 5px;
+  border-right: 3px groove gray;
+  border-bottom: 3px groove gray;
+  margin-bottom: 15px;
+  height: 18px;
+}
