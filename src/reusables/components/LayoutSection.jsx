@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function LayoutSection(props) {
   return (
-    <section className={props.class}>
+    <section id={props.id} className={props.class}>
       {props.children}
     </section>
   );
