@@ -26,9 +26,16 @@ class Main extends Component {
     this.addClassMain(this.state);
   }
 
-  authentication = () {
-
+  handleLoggin = (bool) => {
+    if (bool == false)
+      alert('Datos incorrectos');
+    else {
+      this.setState({
+        isLogging: true,
+      });
+    }
   };
+
   render() {
     return (
       <LayoutSection
@@ -37,9 +44,12 @@ class Main extends Component {
       >
       {
         this.state.isLogging == false ?
-        <Login/>
+        <Login
+          login={this.props.login}
+          handleLoggin={this.handleLoggin}
+        />
         :
-        <div></div>
+        <div>En desarrollo</div>
       }
 
       </LayoutSection>

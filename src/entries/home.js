@@ -7,5 +7,5 @@ import './home.css';
 const homeContainer = document.getElementById('home-container');
 
 render(<Main
-  login={login}
+  login={login.Login}
   />, homeContainer);

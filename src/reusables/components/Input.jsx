@@ -6,6 +6,7 @@ export default function Input(props) {
       className={props.class}
       type={props.type}
       onSubmit={props.submit}
+      ref={props.inputRef}
     />
   );
 }

@@ -2,17 +2,19 @@ import React from 'react';
 
 import LayoutDiv from '../../reusables/components/LayoutDiv.jsx';
 import Input from '../../reusables/components/Input.jsx';
+import Button from '../../reusables/components/Button.jsx';
 
 import '../css/formulario.css';
 
 export default function Formulario(props) {
   return (
-    <LayoutDiv class="Formulario">
+    <form className="Formulario" onSubmit={props.authentication}>
       <LayoutDiv>
         <p>Usuario</p>
         <Input
           type="text"
           class="formulario-input"
+          inputRef={props.setInputRef}
         />
       </LayoutDiv>
       <LayoutDiv>
@@ -20,8 +22,13 @@ export default function Formulario(props) {
         <Input
           type="text"
           class="formulario-input"
+          inputRef={props.setInputRef}
         />
       </LayoutDiv>
-    </LayoutDiv>
+      <Button
+        class="formulario-button"
+        text="Login"
+      />
+    </form>
   );
 }
