@@ -10,7 +10,7 @@ import '../css/home.css';
 class Home extends Component {
 
   state = {
-    data: 'Emitir',
+    data: 'Home',
   };
 
   handleData = (string) => this.setState({

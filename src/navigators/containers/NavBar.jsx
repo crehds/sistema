@@ -5,7 +5,7 @@ import Button from '../../reusables/components/Button.jsx';
 
 import IconNavBar from '../components/IconNavBar.jsx';
 
-import '../css/NavBar.css';
+import '../css/navbar.css';
 import '../css/iconnavbar.css';
 
 class NavBar extends Component {
@@ -33,25 +33,25 @@ class NavBar extends Component {
         secRef={this.setNavRef}
       >
         <IconNavBar
-          aOption="button"
+          aOption="i-navbar"
           iClass="icon-menu burguer-menu"
           handleAddClass={this.handleAddClass}
         />
         <IconNavBar
           name="Home"
-          aOption="button-home"
+          aOption="i-navbar-home"
           iClass="icon-home"
           handleContent={this.handleContent}
         />
         <IconNavBar
           name="Emitir"
-          aOption="button-home"
+          aOption="i-navbar-home"
           iClass="icon-document-add"
           handleContent={this.handleContent}
         />
         <IconNavBar
           name="Modificar"
-          aOption="button-home"
+          aOption="i-navbar-home"
           iClass="icon-inbox-document"
           handleContent={this.handleContent}
         />

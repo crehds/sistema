@@ -10,7 +10,7 @@ import '../css/main.css';
 class Main extends Component {
 
   state = {
-    isLogging: false,
+    isLogging: true,
   };
 
   addClassMain = (isLogging) => {

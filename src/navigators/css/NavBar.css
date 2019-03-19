@@ -14,12 +14,12 @@
   transition: .3s;
 }
 
-.NavBar.is-active .button {
+.NavBar.is-active .i-navbar {
   left: 180px;
   transition: .4s;
 }
 
-.NavBar.is-active .button-home p {
+.NavBar.is-active .i-navbar-home p {
   display: block;
   transition: .28s;
 }
