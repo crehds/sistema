@@ -9,10 +9,13 @@ import '../css/home.css';
 
 class Home extends Component {
 
+  /*Estado inicial para mostrar contenido(Los navegadores son independientes)*/
   state = {
     data: 'Home',
   };
 
+  /*Cambiará el estado en base al string que le envie el NavBar*/
+  /* Estados: Home, Emitir, Modificar*/
   handleData = (string) => this.setState({
       data: string,
     }

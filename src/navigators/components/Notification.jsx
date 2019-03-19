@@ -6,6 +6,7 @@ import LayoutDiv from '../../reusables/components/LayoutDiv.jsx';
 import '../css/notification.css';
 
 class Notification extends Component {
+  /*De momento solo esqueleto, no se implementa alguna funcionalidad*/
   render() {
     return (
       <LayoutDiv class="Notification">

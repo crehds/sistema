@@ -10,10 +10,13 @@ import '../css/iconnavbar.css';
 
 class NavBar extends Component {
 
+  /*Se guarda la referencia para poder manipular el ancho del NavBar*/
   setNavRef = element => (
     this.div = element
   );
 
+  /*Manejador de estilos*/
+  /*Añadirá la clase is-active al hacer click*/
   handleAddClass = () => {
     if (this.div.classList.contains('is-active')) {
       this.div.classList.remove('is-active');
@@ -22,6 +25,7 @@ class NavBar extends Component {
     }
   };
 
+  /*Manejará que estado enviar al manejador de la data del component Home*/
   handleContent= (event) => {
     this.props.handleData(event.target.id.slice(2));
   };

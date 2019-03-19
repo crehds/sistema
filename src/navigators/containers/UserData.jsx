@@ -15,6 +15,9 @@ class UserData extends Component {
     this.i = element
   );
 
+  /*Abre y cierra el cuadro de diálogo para desloguearse.
+    Funcionalidad no implementada
+  */
   handleArrow = () => {
     this.setState({
       isOpen: !this.state.isOpen,
