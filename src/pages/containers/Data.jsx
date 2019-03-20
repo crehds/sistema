@@ -10,11 +10,21 @@ class Data extends Component {
     entre los navegadores
   */
   render() {
+    var {
+      userBar,
+    } = this.props.data;
     return (
       <LayoutSection
-        class="Data"
+        class={this.props.data.class}
       >
-        <UserBar/>
+        {console.log(userBar)}
+        <UserBar
+          class={userBar.class}
+          image={userBar.image}
+          search={userBar.search}
+          notification={userBar.notification}
+          userData={userBar.userData}
+        />
       </LayoutSection>
     );
   }

@@ -4,19 +4,24 @@ import Input from '../../reusables/components/Input.jsx';
 
 import '../css/search.css';
 
-function Search() {
+function Search(props) {
+  var {
+    type,
+    place,
+    name,
+  } = props.search.input;
   /*Sólo esqueleto, al momento de conectar la BD se le añadirá
   la funcionalidad
   */
   return (
     <form
-      className="Search"
+      className={props.search.class}
     >
       <Input
-        type="text"
-        place="Buscar documento"
-        class="Search-input"
-        name="search"
+        type={type}
+        place={place}
+        class={props.search.input.class}
+        name={name}
       />
     </form>
   );

@@ -8,17 +8,17 @@ import '../css/notification.css';
 class Notification extends Component {
   /*De momento solo esqueleto, no se implementa alguna funcionalidad*/
   render() {
+    var {
+      icons,
+    } = this.props.notification;
     return (
-      <LayoutDiv class="Notification">
-        <Icon class="icon-email"/>
-        <Icon class="icon-notifications"/>
-        <Icon class="icon-layers"/>
-        {/*icons.map((icon) => (
+      <LayoutDiv class={this.props.notification.class}>
+        {icons.map((icon) => (
           <Icon
             key={icon.id}
-            icon={icon.icon}
+            class={icon.icon}
           />
-        ))*/}
+        ))}
       </LayoutDiv>
     );
   }

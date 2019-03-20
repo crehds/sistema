@@ -13,18 +13,30 @@ import '../css/userbar.css';
 class UserBar extends Component {
 
   render() {
+    var {
+      image,
+      search,
+      notification,
+      userData,
+    } = this.props;
     return (
       <LayoutDiv
-        class="UserBar"
+        class={this.props.class}
       >
         <Image
-          class="logo"
-          src={logo}
-          alt="logo de yunqui"
+          class={image.class}
+          src={image.src}
+          alt={image.alt}
         />
-        <Search/>
-        <Notification/>
-        <UserData/>
+        <Search
+          search={search}
+        />
+        <Notification
+          notification={notification}
+        />
+        <UserData
+          userData={userData}
+        />
       </LayoutDiv>
     );
   }
