@@ -1,0 +1,83 @@
+{
+  "Home": {
+    "NavBar": {
+      "id": "1",
+      "class": "NavBar",
+      "icons": [
+        {
+          "id": "1",
+          "option": "i-navbar",
+          "icon": "icon-menu burguer-menu"
+        },
+        {
+          "id": "2",
+          "option": "i-navbar-home",
+          "icon": "icon-home"
+        },
+        {
+          "id": "3",
+          "option": "i-navbar-home",
+          "icon": "icon-document-add"
+        },
+        {
+          "id": "4",
+          "option": "i-navbar-home",
+          "icon": "icon-inbox-document"
+        }
+      ]
+    },
+    "Data": {
+      "id": "1",
+      "class": "Data",
+      "UserBar": {
+        "id": "1",
+        "Image": {
+          "id": "1",
+          "src": "./images/logo1.png",
+          "alt": "logo de yunqui"
+        },
+        "Search": {
+          "id": "1",
+          "class": "Search",
+          "input": {
+            "type": "text",
+            "place": "Buscar documento",
+            "class": "Search-input",
+            "name": "search"
+          }
+        },
+        "Notification": {
+          "id": "2",
+          "class": "Notification",
+          "icons": [
+            {
+              "id": "1",
+              "icon": "icon-email"
+            },
+            {
+              "id": "1",
+              "icon": "icon-notifications"
+            },
+            {
+              "id": "1",
+              "icon": "icon-layers"
+            }
+          ]
+        },
+        "UserData": {
+          "id": "3",
+          "icons": [
+            {
+              "id": "1",
+              "icon": "icon-user image"
+            },
+            {
+              "id": "2",
+              "icon": "icon-keyboard_arrow_down arrow"
+            }
+          ]
+        }
+      }
+    }
+  }
+}
