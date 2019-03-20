@@ -33,6 +33,7 @@ class Home extends Component {
           handleData={this.handleData}
         />
         <Data
+          data={data}
         />
       </LayoutSection>
     );

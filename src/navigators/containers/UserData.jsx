@@ -26,7 +26,7 @@ class UserData extends Component {
 
   render() {
     return (
-      <LayoutDiv class="UserData">
+      <LayoutDiv class={this.props.userData.class}>
         <Icon
           class="icon-user image"
         />
