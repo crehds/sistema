@@ -31,34 +31,33 @@ class NavBar extends Component {
   };
 
   render() {
+    var {
+      navBar,
+    } = this.props;
     return (
       <LayoutSection
-        class="NavBar"
+        class={navBar.class}
         secRef={this.setNavRef}
       >
-        <IconNavBar
-          aOption="i-navbar"
-          iClass="icon-menu burguer-menu"
-          handleAddClass={this.handleAddClass}
-        />
-        <IconNavBar
-          name="Home"
-          aOption="i-navbar-home"
-          iClass="icon-home"
-          handleContent={this.handleContent}
-        />
-        <IconNavBar
-          name="Emitir"
-          aOption="i-navbar-home"
-          iClass="icon-document-add"
-          handleContent={this.handleContent}
-        />
-        <IconNavBar
-          name="Modificar"
-          aOption="i-navbar-home"
-          iClass="icon-inbox-document"
-          handleContent={this.handleContent}
-        />
+      {navBar.icons.map((e, i) => {
+        if (i == 0) {
+          /*Se renderiza el burguer menu*/
+          return (<IconNavBar
+                    key={e.id}
+                    aOption={e.option}
+                    iClass={e.icon}
+                    handleAddClass={this.handleAddClass}
+                  />);
+        }
+        /*se renderiza el resto de íconos*/
+        return (<IconNavBar
+                  key={e.id}
+                  aOption={e.option}
+                  iClass={e.icon}
+                  name={e.name}
+                  handleContent={this.handleContent}
+               />);
+      })}
       </LayoutSection>
     );
   }
