@@ -12,17 +12,11 @@
         {
           "id": "2",
           "option": "i-navbar-home",
-          "icon": "icon-home",
-          "name": "Home"
-        },
-        {
-          "id": "3",
-          "option": "i-navbar-home",
           "icon": "icon-document-add",
           "name": "Emitir"
         },
         {
-          "id": "4",
+          "id": "3",
           "option": "i-navbar-home",
           "icon": "icon-inbox-document",
           "name": "Modificar"
@@ -30,19 +24,19 @@
       ]
     },
     "data": {
-      "id": "1",
+      "id": "2",
       "class": "Data",
       "userBar": {
         "id": "1",
-        "class":"UserBar",
+        "class": "UserBar",
         "image": {
           "id": "1",
-          "class":"logo",
+          "class": "logo",
           "src": "./images/logo1.png",
           "alt": "logo de yunqui"
         },
         "search": {
-          "id": "1",
+          "id": "2",
           "class": "Search",
           "input": {
             "type": "text",
@@ -52,7 +46,7 @@
           }
         },
         "notification": {
-          "id": "2",
+          "id": "3",
           "class": "Notification",
           "icons": [
             {
@@ -70,8 +64,8 @@
           ]
         },
         "userData": {
-          "id": "3",
-          "class":"UserData",
+          "id": "4",
+          "class": "UserData",
           "icons": [
             {
               "id": "1",
@@ -82,6 +76,81 @@
               "icon": "icon-keyboard_arrow_down arrow"
             }
           ]
+        }
+      },
+      "emitir": {
+        "id": "2",
+        "class": "Emitir",
+        "detailsDocument": {
+          "id": "1",
+          "class": "DetailsDocument",
+          "selectDetails": {
+            "id": "1",
+            "selectTitle": "Emitir",
+            "class": "option-detailsDocument",
+            "selectOption": {
+              "id": "1",
+              "name": "select",
+              "class": "seletc-option",
+              "options": [
+                {
+                  "id": "1",
+                  "value": "Cotización"
+                },
+                {
+                  "id": "2",
+                  "value": "Orden de Compra"
+                }
+              ]
+            }
+          },
+          "document": {
+            "id": "2",
+            "class": "form-document",
+            "destinatario": {
+              "destinatario": "empresa/persona",
+              "R_U_T": "del destinatario",
+              "contacto": "numero telefónico",
+              "email": "ejemplo@ejempl.com",
+            },
+            "documents": [
+              {
+                "id": "1",
+                "class":"option-form",
+                "description":"Cotización",
+                "inputs": {
+                  "condicionPago": "Mínimo 5 días",
+                  "validezOferta": "Mínimo 7 días",
+                  "tiempoEntrega": "Máximo 30 días",
+                  "lugarEntrega": "Lugar de entrega",
+                  "descuento": "Se deconstará al total"
+                }
+              },
+              {
+                "id": "2",
+                "class":"option-form",
+                "description":"Orden de Compra",
+                "inputs": {
+                  "condicionPago": "Mínimo una semana",
+                  "monedaYTc": "pesos o dólares",
+                  "lugarEntrega": "Lugar de entrega",
+                  "plazoEntrega": "Máximo 30 días",
+                  "referencia": "cotización del proveedor",
+                  "giro": "sin definir"
+                }
+              }
+            ],
+          "buttonDocument":
+            {
+                "id": "3",
+                "class":"option-button",
+                "value":"Añadir datos",
+            }
+          }
+        },
+        "PDF":
+        {
+          "id":"2"
         }
       }
     }
