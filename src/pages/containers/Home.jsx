@@ -11,26 +11,29 @@ class Home extends Component {
 
   /*Estado inicial para mostrar contenido(Los navegadores son independientes)*/
   state = {
-    data: 'Home',
+    content: 'Home',
   };
 
   /*Cambiará el estado en base al string que le envie el NavBar*/
   /* Estados: Home, Emitir, Modificar*/
   handleData = (string) => this.setState({
-      data: string,
+      content: string,
     }
   );
 
   render() {
-    var { data } = this.state;
+    var { content } = this.state;
+    var { navBar, data } = this.props;
     return (
       <LayoutSection
         class="Home"
       >
         <NavBar
+          navBar={navBar}
           handleData={this.handleData}
         />
-        <Data/>
+        <Data
+        />
       </LayoutSection>
     );
   }

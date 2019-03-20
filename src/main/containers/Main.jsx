@@ -52,6 +52,7 @@ class Main extends Component {
   };
 
   render() {
+    var { home } = this.props;
     return (
       <LayoutSection
         id="Main"
@@ -64,7 +65,10 @@ class Main extends Component {
           handleLoggin={this.handleLoggin}
         />
         :
-        <Home/>
+        <Home
+          navBar={home.navBar}
+          data={home.data}
+        />
       }
 
       </LayoutSection>
