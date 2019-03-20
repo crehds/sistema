@@ -34,8 +34,10 @@
       "class": "Data",
       "userBar": {
         "id": "1",
+        "class":"UserBar",
         "image": {
           "id": "1",
+          "class":"logo",
           "src": "./images/logo1.png",
           "alt": "logo de yunqui"
         },
@@ -69,6 +71,7 @@
         },
         "userData": {
           "id": "3",
+          "class":"UserData",
           "icons": [
             {
               "id": "1",
