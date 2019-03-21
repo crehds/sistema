@@ -49,10 +49,8 @@ class Emitir extends Component {
   /*(nombre,cantidad,precio) y los ingresa en un arreglo*/
   handleDetailProd = (event) => {
     event.preventDefault();
-    console.log(this.state.detailProd);
     let array = this.state.detailProd.map(e => e.value);
     event.target.reset();
-    console.log(array);
     return this.createDetailProd(array);
   };
 
@@ -60,7 +58,6 @@ class Emitir extends Component {
   createDetailProd = (data) => (
       data.forEach(e => {
       var d = document.getElementById('detail-prod-vist');
-      console.log(d);
       var div = document.createElement('div');
       d.appendChild(div).classList.add('detalle-vist-detail');
       div.innerHTML = e;

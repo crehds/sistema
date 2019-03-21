@@ -36,7 +36,7 @@ class PDF extends PureComponent {
   pdfDestinatario = (destinatario) => {
     var template = ['R_U_T', 'Cliente', 'Contacto', 'Correo'];
     return destinatario.length != 0 ? Object.values(destinatario).map((e, i) => (
-      <div className="pdf-destinatario-div" key={i}>
+      <div className="pdf-destinatario-div" key={`pdf-dest-${i}`}>
         <p>{template[i] + ' ' + ':'}</p>
         <p>{e}</p>
       </div>

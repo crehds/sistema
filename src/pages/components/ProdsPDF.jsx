@@ -15,7 +15,7 @@ export default function ProdsPDF(props) {
       >
         {props.titlesProdPDF.titles.map(e => (
           <Title
-            key={e.id}
+            key={`titlesProd-${e.id}`}
             class={e.class}
             title={e.title}
           />

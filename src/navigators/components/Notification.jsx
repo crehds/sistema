@@ -15,7 +15,7 @@ class Notification extends Component {
       <LayoutDiv class={this.props.notification.class}>
         {icons.map((icon) => (
           <Icon
-            key={icon.id}
+            key={`notif-${icon.id}`}
             class={icon.icon}
           />
         ))}

@@ -16,7 +16,6 @@ class Data extends Component {
 
   /*Manejador de contenido*/
   handleContent = (state) => {
-    console.log(this.state.empresa);
     switch (state) {
       case 'Emitir':
         var { emitir } = this.props.data;

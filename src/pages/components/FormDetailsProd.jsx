@@ -23,7 +23,7 @@ export default function FormDetailsprod(props) {
       {
         detailsInputs.spans.map(e => (
           <span
-            key={e.id}
+            key={`span-${e.id}`}
           >
             <p>{e.text}</p>
             <Input

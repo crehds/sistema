@@ -22,7 +22,7 @@ class SelectDetails extends PureComponent {
         >
           {selectOption.options.map(e =>
             <option
-              key={e.id}
+              key={`option-${e.id}`}
               value={e.value}
             >
             {e.value}

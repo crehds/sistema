@@ -32,10 +32,9 @@ class DetailsDocument extends PureComponent {
         className={this.props.class}
         onSubmit={this.props.showInputs}
       >
-      {console.log(destinatario)}
       { Object.keys(destinatario).map((e, i) => (
           <LayoutDiv
-            key={i}
+            key={`dest-${i}`}
             class={content.class}
           >
             <p>{e}</p>
@@ -49,7 +48,7 @@ class DetailsDocument extends PureComponent {
       }
       { Object.keys(content.inputs).map((e, i) => (
           <LayoutDiv
-            key={i}
+            key={`cont-${i}`}
             class={content.class}
           >
             <p>{e}</p>

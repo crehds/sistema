@@ -10,13 +10,12 @@ export default function DetailProdVist(props) {
       id={props.id}
       class={props.class}
     >
-    {console.log(props.id)}
       <LayoutDiv
         class={props.detailProdVistTitles.class}
       >
       {props.detailProdVistTitles.titles.map(e => (
         <h1
-          key={e.id}
+          key={`dpv-${e.id}`}
         >
         {e.title}
         </h1>
