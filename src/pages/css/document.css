@@ -1,0 +1,26 @@
+.form-document {
+  display:grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: repeat(2, 25px);
+  grid-row-gap: 10px;
+  font-size: 12px;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.option-form {
+  display: flex;
+  flex-wrap: nowrap;
+  text-align: left;
+  padding: 2px;
+  justify-content: space-between;
+}
+.option-form p {
+  margin: 0;
+}
+
+.option-button {
+  grid-column: 1 / -1;
+  margin-left: 35%;
+  margin-right: 35%;
+}

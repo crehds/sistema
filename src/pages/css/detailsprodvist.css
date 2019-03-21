@@ -1,0 +1,19 @@
+.detailProdVist {
+  display:grid;
+  margin-top: 8px;
+  padding-top: 3px;
+  grid-template-columns: repeat(3, 1fr);
+  box-sizing: border-box;
+  box-shadow: 0 0 1px 3px rgba(220,220,220,.9);
+  align-content: center;
+  max-height: 205px;
+  overflow-y: auto;
+  overflow-x: auto;
+}
+
+.detailProdVist-title {
+  display: flex;
+  justify-content: space-around;
+  grid-column: 1 / 4;
+  max-width: 95%;
+}

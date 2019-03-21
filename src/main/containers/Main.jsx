@@ -11,7 +11,7 @@ class Main extends Component {
 
   state = {
     //modificar a true si se desea obviar el loggin al debugear
-    isLogging: false,
+    isLogging: true,
   };
 
   /*El componente Main tendrá una segunda clase que se modificará dependiendo
@@ -52,7 +52,7 @@ class Main extends Component {
   };
 
   render() {
-    var { home } = this.props;
+    var { home, dataDb } = this.props;
     return (
       <LayoutSection
         id="Main"
@@ -68,6 +68,7 @@ class Main extends Component {
         <Home
           navBar={home.navBar}
           data={home.data}
+          dataDb={dataDb}
         />
       }
 

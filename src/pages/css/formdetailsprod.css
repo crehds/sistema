@@ -1,0 +1,26 @@
+.detailProd-formInput {
+  display: grid;
+  grid-template-rows: 55px 25px;
+  justify-items: center;
+  padding-bottom: 2px;
+  font-size: 12px;
+}
+
+.detailProd-formInput-spans {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+.detailProd-formInput .detailProd-formInput-spans span {
+  padding-top: 5px;
+  padding-right: 10px;
+}
+
+.detailProd-formInput .detailProd-formInput-spans span p {
+  margin: 1px;
+}
+
+.detailProd-formButton {
+  display: block;
+  outline: 0;
+}

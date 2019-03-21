@@ -1,0 +1,15 @@
+.PreviewVist {
+  box-shadow: 0 1px 3px rgba(64,48,13,.84);
+  max-height: 100%;
+  display: grid;
+  grid-template-rows: 100px 1fr 4fr 1fr;
+  width: 100%;
+  font-size: 14px;
+  background-color: #F0F1f1;
+}
+
+.pdf-details {
+  border: 1px solid #CFCFCF;
+  display: grid;
+  grid-template-columns: repeat(2,1fr)
+}

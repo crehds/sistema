@@ -11,7 +11,7 @@ class Home extends Component {
 
   /*Estado inicial para mostrar contenido(Los navegadores son independientes)*/
   state = {
-    content: 'Home',
+    content: 'Emitir',
   };
 
   /*Cambiará el estado en base al string que le envie el NavBar*/
@@ -23,7 +23,7 @@ class Home extends Component {
 
   render() {
     var { content } = this.state;
-    var { navBar, data } = this.props;
+    var { navBar, data, dataDb } = this.props;
     return (
       <LayoutSection
         class="Home"
@@ -34,6 +34,9 @@ class Home extends Component {
         />
         <Data
           data={data}
+          state={content}
+          empresa={dataDb.empresa}
+          usuario={dataDb.usuario}
         />
       </LayoutSection>
     );
