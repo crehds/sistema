@@ -23,7 +23,6 @@ export default function DetailsProd(props) {
         handleDetailProd={props.handleDetailProd}
         detailsInputsButton={formInputs.detailsInputsButton}
       />
-      {console.log(detailProdVist.class)}
       <DetailsProdVist
         class={detailProdVist.class}
         id={detailProdVist.idHTML}

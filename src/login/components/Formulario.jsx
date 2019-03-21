@@ -20,7 +20,7 @@ export default function Formulario(props) {
       <LayoutDiv>
         <p>Contraseña</p>
         <Input
-          type="text"
+          type="password"
           class="formulario-input"
           inputRef={props.setInputRef}
         />
