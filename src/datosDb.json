@@ -1,0 +1,25 @@
+{
+  "data":
+  {
+    "empresa":
+    {
+      "razon_social":"Pabeal Soto y Fuerzalinda Yunqui SPA",
+      "direccion":"Carriel Sur 10042, Villa 'El Mirador', Antofagasta - Chile",
+      "R_U_T":"76.502.787-K",
+      "contacto":"+56 9 8922 5843",
+      "email_empresa":"ventas@yunqichile.com",
+      "ciudad":"Antofagasta",
+      "cuenta_bancaria": "69297293"
+    },
+    "usuario":
+    {
+      "cuenta":"claudiafh",
+      "password":"12345",
+      "nombre":"Claudia",
+      "apellido":"Fuenzalinda Herrera",
+      "cargo":"asistente comercial",
+      "contacto": "960265942",
+      "email_usuario":"cfuenzalinda@yunqichile.com"
+    }
+  }
+}
