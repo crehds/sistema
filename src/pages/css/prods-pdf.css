@@ -1,0 +1,16 @@
+.pdf-prods {
+  border: 1px solid #CFCFCF;
+  display: grid;
+  grid-template-columns: 1fr 6fr 1fr 1fr 1fr;
+}
+
+.pdf-prods-details {
+  border: 1px groove #CFCFCF;
+}
+
+.pdf-prods-titles-container {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr 6fr 1fr 1fr 1fr;
+  border-bottom: 1px solid #CFCFCF;
+}

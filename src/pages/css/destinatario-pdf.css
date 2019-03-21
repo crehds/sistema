@@ -1,0 +1,20 @@
+.pdf-destinatario {
+  border: 1px solid #CFCFCF;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 35px);
+  align-items: center;
+}
+
+.pdf-destinatario-div {
+  display: flex;
+  flex-wrap: nowrap;
+  text-align: left;
+  padding: 2px;
+  padding-left: 10px;
+  justify-content: space-between;
+}
+
+.pdf-destinatario-div p {
+  margin:0;
+}

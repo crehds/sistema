@@ -2,13 +2,47 @@ import React, { Component } from 'react';
 
 import LayoutSection from '../../reusables/components/LayoutSection.jsx';
 import UserBar from '../../navigators/containers/UserBar.jsx';
+import Emitir from './Emitir.jsx';
 
 import '../css/data.css';
 
 class Data extends Component {
-  /*Faltan agregar las pages para mostrar contenido en el área en blanco
-    entre los navegadores
-  */
+
+  state = {
+    content: this.props.state,
+    empresa: this.props.empresa,
+    usuario: this.props.usuario,
+  };
+
+  /*Manejador de contenido*/
+  handleContent = (state) => {
+    console.log(this.state.empresa);
+    switch (state) {
+      case 'Emitir':
+        var { emitir } = this.props.data;
+        return (<Emitir
+                  emitir={emitir}
+                  empresa={this.state.empresa}
+                  usuario={this.state.usuario}
+                />);
+      case 'Modificar':
+        var { modificar } = this.props.data;
+        return (<Modificar
+                  modificar={modificar}
+                  empresa={this.state.empresa}
+                  usuario={this.state.usuario}
+                />);
+    }
+  };
+
+  UNSAFE_componentWillReceiveProps(nextProps) {
+    if (nextProps.state !== this.props.state) {
+      this.setState({
+        content: nextProps.state,
+      });
+    }
+  }
+
   render() {
     var {
       userBar,
@@ -17,7 +51,6 @@ class Data extends Component {
       <LayoutSection
         class={this.props.data.class}
       >
-        {console.log(userBar)}
         <UserBar
           class={userBar.class}
           image={userBar.image}
@@ -25,6 +58,7 @@ class Data extends Component {
           notification={userBar.notification}
           userData={userBar.userData}
         />
+        {this.handleContent(this.state.content)}
       </LayoutSection>
     );
   }

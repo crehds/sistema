@@ -12,17 +12,11 @@
         {
           "id": "2",
           "option": "i-navbar-home",
-          "icon": "icon-home",
-          "name": "Home"
-        },
-        {
-          "id": "3",
-          "option": "i-navbar-home",
           "icon": "icon-document-add",
           "name": "Emitir"
         },
         {
-          "id": "4",
+          "id": "3",
           "option": "i-navbar-home",
           "icon": "icon-inbox-document",
           "name": "Modificar"
@@ -30,19 +24,19 @@
       ]
     },
     "data": {
-      "id": "1",
+      "id": "2",
       "class": "Data",
       "userBar": {
         "id": "1",
-        "class":"UserBar",
+        "class": "UserBar",
         "image": {
           "id": "1",
-          "class":"logo",
+          "class": "logo",
           "src": "./images/logo1.png",
           "alt": "logo de yunqui"
         },
         "search": {
-          "id": "1",
+          "id": "2",
           "class": "Search",
           "input": {
             "type": "text",
@@ -52,7 +46,7 @@
           }
         },
         "notification": {
-          "id": "2",
+          "id": "3",
           "class": "Notification",
           "icons": [
             {
@@ -70,8 +64,8 @@
           ]
         },
         "userData": {
-          "id": "3",
-          "class":"UserData",
+          "id": "4",
+          "class": "UserData",
           "icons": [
             {
               "id": "1",
@@ -80,6 +74,228 @@
             {
               "id": "2",
               "icon": "icon-keyboard_arrow_down arrow"
+            }
+          ]
+        }
+      },
+      "emitir": {
+        "id": "2",
+        "class": "Emitir",
+        "detailsDocument": {
+          "id": "1",
+          "class": "DetailsDocument",
+          "selectDetails": {
+            "id": "1",
+            "selectTitle": "Emitir",
+            "class": "option-detailsDocument",
+            "selectOption": {
+              "id": "1",
+              "name": "select",
+              "class": "seletc-option",
+              "options": [
+                {
+                  "id": "1",
+                  "value": "Cotización"
+                },
+                {
+                  "id": "2",
+                  "value": "Orden de Compra"
+                }
+              ]
+            }
+          },
+          "document": {
+            "id": "2",
+            "class": "form-document",
+            "destinatario": {
+              "Destinatario": "empresa/persona",
+              "R_U_T": "del destinatario",
+              "Contacto": "numero telefónico",
+              "Email": "ejemplo@ejempl.com"
+            },
+            "documents": [
+              {
+                "id": "1",
+                "class": "option-form",
+                "description": "Cotización",
+                "inputs": {
+                  "Condicion de pago": "Mínimo 5 días",
+                  "Validez de oferta": "Mínimo 7 días",
+                  "Tiempo de entrega": "Máximo 30 días",
+                  "Lugar de entrega": "Lugar de entrega",
+                  "Descuento": "Se deconstará al total"
+                }
+              },
+              {
+                "id": "2",
+                "class": "option-form",
+                "description": "Orden de Compra",
+                "inputs": {
+                  "Condicionde pago": "Mínimo una semana",
+                  "monedaYTc": "pesos o dólares",
+                  "Lugar de entrega": "Lugar de entrega",
+                  "Plazo de entrega": "Máximo 30 días",
+                  "Referencia": "cotización del proveedor",
+                  "Giro": "sin definir"
+                }
+              }
+            ],
+            "buttonDocument": {
+              "id": "3",
+              "class": "option-button",
+              "value": "Añadir datos"
+            }
+          }
+        },
+        "pdf": {
+          "id": "2",
+          "class": "PreviewVist",
+          "idHTML": "previewVist",
+          "dataEmpresaPDF": {
+            "id": "1",
+            "class": "pdf-empresa",
+            "image": {
+              "id": "1",
+              "src": "./images/logo1.png",
+              "alt": "logo de la empresa"
+            },
+            "title": {
+              "id": "1",
+              "class": "pdf-empresa-title"
+            }
+          },
+          "dataDestinatarioPDF": {
+            "id": "2",
+            "class": "pdf-destinatario"
+          },
+          "dataProdPDF": {
+            "id": "3",
+            "class": "pdf-prods",
+            "titlesProdPDF": {
+              "id": "1",
+              "class": "pdf-prods-titles-container",
+              "titles": [
+                {
+                  "id": "1",
+                  "class": "pdf-prods-details",
+                  "title": "Item"
+                },
+                {
+                  "id": "2",
+                  "class": "pdf-prods-details",
+                  "title": "Producto"
+                },
+                {
+                  "id": "3",
+                  "class": "pdf-prods-details",
+                  "title": "Cantidad"
+                },
+                {
+                  "id": "4",
+                  "class": "pdf-prods-details",
+                  "title": "Precio Unitario"
+                },
+                {
+                  "id": "5",
+                  "class": "pdf-prods-details",
+                  "title": "Precio Total"
+                }
+              ]
+            }
+          },
+          "dataTributePDF": {
+            "id": "4",
+            "class": "pdf-tribute"
+          }
+        },
+        "detailsProd": {
+          "id": "3",
+          "class": "DetailsProd",
+          "formInputs": {
+            "id": "1",
+            "class": "detailProd-formInput",
+            "detailsInputs": {
+              "id": "1",
+              "class": "detailProd-formInput-spans",
+              "spans": [
+                {
+                  "id": "1",
+                  "text": "Nombre producto",
+                  "type": "text",
+                  "placehold": "Ej. casaca de cuero"
+                },
+                {
+                  "id": "2",
+                  "text": "Cantidad",
+                  "type": "text",
+                  "placehold": "Expresado en unidades"
+                },
+                {
+                  "id": "3",
+                  "text": "Precio",
+                  "type": "text",
+                  "placehold": "Expresado en pesos"
+                }
+              ]
+            },
+            "detailsInputsButton": {
+              "id": "2",
+              "class": "detailProd-formButton",
+              "value": "Agregar Producto"
+            }
+          },
+          "detailProdVist": {
+            "id": "2",
+            "idHTML": "detail-prod-vist",
+            "class": "detailProdVist",
+            "detailProdVistTitles": {
+              "id": "1",
+              "class": "detailProdVist-title",
+              "titles": [
+                {
+                  "id": "1",
+                  "title": "Producto"
+                },
+                {
+                  "id": "2",
+                  "title": "Cantidad"
+                },
+                {
+                  "id": "3",
+                  "title": "Precio"
+                }
+              ]
+            }
+          },
+          "detailsProdButton": {
+            "id": "3",
+            "buttons": [
+              {
+                "id": "1",
+                "class": "detailProd-button",
+                "value": "Agregar"
+              },
+              {
+                "id": "2",
+                "class": "detailProd-button",
+                "value": "Resetear"
+              }
+            ]
+          }
+        },
+        "buttonsEmitir": {
+          "id": "4",
+          "class": "buttonsEmitir",
+          "buttons": [
+            {
+              "id": "1",
+              "class": "button-emitir",
+              "value": "Guardar"
+            },
+            {
+              "id": "2",
+              "class": "button-emitir",
+              "value": "Descargar"
             }
           ]
         }
