@@ -21,6 +21,7 @@ class DetailsDocument extends PureComponent {
   setInputRef = element => this.state.references.push(element);
 
   render () {
+
     var {
       content,
       destinatario,

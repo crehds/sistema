@@ -32,6 +32,7 @@ class Emitir extends Component {
 
   /*Obtiene los datos del documento (orden de compra o cotización)*/
   getContentDetailsDocument = (content) => {
+    console.log(content);
     this.setState({
       contentDestinatario: content.slice(0, 4).map(e => e.value),
       contentDocumento: content.slice(4).map(e => e.value),
@@ -48,8 +49,10 @@ class Emitir extends Component {
   /*(nombre,cantidad,precio) y los ingresa en un arreglo*/
   handleDetailProd = (event) => {
     event.preventDefault();
+    console.log(this.state.detailProd);
     let array = this.state.detailProd.map(e => e.value);
     event.target.reset();
+    console.log(array);
     return this.createDetailProd(array);
   };
 
@@ -57,6 +60,7 @@ class Emitir extends Component {
   createDetailProd = (data) => (
       data.forEach(e => {
       var d = document.getElementById('detail-prod-vist');
+      console.log(d);
       var div = document.createElement('div');
       d.appendChild(div).classList.add('detalle-vist-detail');
       div.innerHTML = e;
@@ -83,7 +87,7 @@ class Emitir extends Component {
 
   /*resetea la vista de productos*/
   resetDetailProdVist = () => {
-    var d = document.getElementById('prueba');
+    var d = document.getElementById('detail-prod-vist');
     while (d.children.length != 1) {
       d.removeChild(d.lastChild);
     }
@@ -107,7 +111,6 @@ class Emitir extends Component {
       buttonsEmitir,
     } = this.props.emitir;
 
-    console.log(empresa);
     return (
       <LayoutSection
         class={this.props.emitir.class}
@@ -118,7 +121,6 @@ class Emitir extends Component {
           handleOptions={this.handleOptions}
           getContentDetailsDocument={this.getContentDetailsDocument}
         />
-        {console.log('aquí')}
         <PDF
           contentDocumento={contentDocumento}
           contentDestinatario={contentDestinatario}
@@ -127,7 +129,6 @@ class Emitir extends Component {
           empresa={empresa}
           usuario={usuario}
         />
-        {console.log('aquí')}
         <DetailsProd
           setDetRef={this.setDetRef}
           detailsProd={detailsProd}

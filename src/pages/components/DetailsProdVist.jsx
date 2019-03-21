@@ -10,6 +10,7 @@ export default function DetailProdVist(props) {
       id={props.id}
       class={props.class}
     >
+    {console.log(props.id)}
       <LayoutDiv
         class={props.detailProdVistTitles.class}
       >

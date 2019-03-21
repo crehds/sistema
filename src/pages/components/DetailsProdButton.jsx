@@ -7,7 +7,7 @@ import '../css/detailsprodbutton.css';
 export default function DetailsProdButton(props) {
   return (
     props.buttons.map((e, i) => {
-      if ( i == 1) {
+      if (i == 1) {
         return (
           <Button
             key={e.id}

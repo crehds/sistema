@@ -22,6 +22,7 @@ export default function DetailsProd(props) {
         detailsInputs={formInputs.detailsInputs}
         handleDetailProd={props.handleDetailProd}
         detailsInputsButton={formInputs.detailsInputsButton}
+        setDetRef={props.setDetRef}
       />
       <DetailsProdVist
         class={detailProdVist.class}

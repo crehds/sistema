@@ -29,6 +29,7 @@ export default function FormDetailsprod(props) {
             <Input
               type={e.type}
               place={e.placehold}
+              inputRef={props.setDetRef}
             />
           </span>
         ))
