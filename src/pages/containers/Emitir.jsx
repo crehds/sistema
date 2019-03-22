@@ -57,10 +57,16 @@ class Emitir extends Component {
   /*Maneja la información que se muestra en cada detalle de producto*/
   /*(nombre,cantidad,precio) y los ingresa en un arreglo*/
   handleDetailProd = (event) => {
+    let { detailProd } = this.state;
     event.preventDefault();
-    let array = this.state.detailProd.map(e => e.value);
-    event.target.reset();
-    return this.createDetailProd(array);
+    if (this.authenticationDetailsDocument(detailProd)) {
+      let array = detailProd.map(e => e.value);
+      event.target.reset();
+      return this.createDetailProd(array);
+    } else {
+      let string = 'Hace falta completar algún campo en Producto';
+      this.showError(string);
+    }
   };
 
   /*crea un detalle de producto*/
