@@ -10,13 +10,13 @@
 }
 
 .NavBar.is-active {
-  width:300px;
+  width:200px;
   transition: .3s;
 }
 
 .NavBar.is-active .i-navbar {
-  left: 180px;
-  transition: .4s;
+  left: 125px;
+  transition: .5s;
 }
 
 .NavBar.is-active .i-navbar-home p {
