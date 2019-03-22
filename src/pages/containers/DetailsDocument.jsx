@@ -34,11 +34,13 @@ class DetailsDocument extends Component {
   showInputs = (event) => {
     event.preventDefault();
     var { content } = this.state;
+
     if (this.props.authenticationDetailsDocument(content)) {
       this.props.getContentDetailsDocument(content);
       event.target.reset();
     } else {
-      this.props.showError();
+      var message = 'hacen falta ingresar datos en la sección de Emitir'
+      this.props.showError(message);
     }
   };
 

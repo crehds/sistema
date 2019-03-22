@@ -43,8 +43,9 @@ class Emitir extends Component {
     return content.every(e => e.value != '');
   };
 
-  showError = () => {
-    alert('Hacen falta ingresar datos en la sección Emitir');
+  /*Recibe un string para mostrar como alerta*/
+  showError = (string) => {
+    alert(string);
   };
 
   /*Sirve para obtener las valores ingresados antes de clickear
