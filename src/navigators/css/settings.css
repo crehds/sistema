@@ -1,0 +1,18 @@
+.login {
+  position:absolute;
+  display: grid;
+  grid-template-rows: repeat(2,10px);
+  text-align: center;
+  right: 5px;
+  top:96px;
+  font-size: 12px;
+  background: #A1A1A1;
+}
+
+.login p {
+  margin: 2px;
+}
+.login p:hover {
+  cursor: pointer;
+  background: rgb(185,185,185);
+}

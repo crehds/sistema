@@ -4,8 +4,9 @@ import Button from '../../reusables/components/Button.jsx';
 
 import '../css/detailsprodbutton.css';
 
-/*Muestra los botones que controlan la vista detallada de los productos(Agregar y Resetear)*/
-export default function DetailsProdButton(props) {
+/*Muestra los botones maestros de las vistas: productos(Agregar y Resetear) y Emitir(Guardar y Descargar)*/
+/**/
+export default function Buttons(props) {
   return (
     props.buttons.map((e, i) => {
       if (i == 1) {
@@ -14,7 +15,7 @@ export default function DetailsProdButton(props) {
             key={e.id}
             class={e.class}
             text={e.value}
-            functionClick={props.showProd}
+            functionClick={props.function1}
           />
         );
       } else {
@@ -23,7 +24,7 @@ export default function DetailsProdButton(props) {
             key={e.id}
             class={e.class}
             text={e.value}
-            functionClick={props.resetDetailProdVist}
+            functionClick={props.function2}
           />
         );
       }

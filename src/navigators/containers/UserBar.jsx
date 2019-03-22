@@ -18,7 +18,10 @@ class UserBar extends Component {
       search,
       notification,
       userData,
+      unloggin,
+      functionsSettings,
     } = this.props;
+    console.log(functionsSettings[0]);
     return (
       <LayoutDiv
         class={this.props.class}
@@ -36,6 +39,7 @@ class UserBar extends Component {
         />
         <UserData
           userData={userData}
+          functionsSettings={functionsSettings}
         />
       </LayoutDiv>
     );

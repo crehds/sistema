@@ -40,7 +40,7 @@
           "class": "Search",
           "input": {
             "type": "text",
-            "place": "Buscar documento",
+            "place": "En desarrollo",
             "class": "Search-input",
             "name": "search"
           }
@@ -75,7 +75,20 @@
               "id": "2",
               "icon": "icon-keyboard_arrow_down arrow"
             }
-          ]
+          ],
+          "settings": {
+            "class": "login",
+            "content": [
+              {
+                "id": "1",
+                "text": "Perfil"
+              },
+              {
+                "id": "2",
+                "text": "Desloguearse"
+              }
+            ]
+          }
         }
       },
       "emitir": {

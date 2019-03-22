@@ -11,7 +11,7 @@ class Main extends Component {
 
   state = {
     //modificar a true si se desea obviar el loggin al debugear
-    isLogging: true,
+    isLogging: false,
   };
 
   /*El componente Main tendrá una segunda clase que se modificará dependiendo
@@ -21,6 +21,9 @@ class Main extends Component {
     var d = document.getElementById('Main');
 
     if (isLogging == false) {
+      if (d.classList.contains('Home')) {
+        d.classList.remove('Home');
+      }
       d.classList.add('Login');
     } else {
       if (d.classList.contains('Login')) {
@@ -51,6 +54,20 @@ class Main extends Component {
     }
   };
 
+  /*Mostrará (futuro) el Perfil del usuario*/
+  showProfile = () => (
+    alert('En desarrollo')
+  );
+
+  /*Cambia el estado para volver al login*/
+  /*Invoca al manejador de clases del Main*/
+  unloggin = () => {
+    this.setState({
+      isLogging: false,
+    });
+    this.addClassMain(false);
+  };
+
   render() {
     var { home, dataDb } = this.props;
     return (
@@ -69,6 +86,8 @@ class Main extends Component {
           navBar={home.navBar}
           data={home.data}
           dataDb={dataDb}
+          showProfile={this.showProfile}
+          unloggin={this.unloggin}
         />
       }
 

@@ -37,8 +37,8 @@ export default function DetailsProd(props) {
       {/*Componente que contiene los botones que manejan la vista de los productos ingresados*/}
       <DetailsProdButton
         buttons={detailsProdButton.buttons}
-        showProd={props.showProd}
-        resetDetailProdVist={props.resetDetailProdVist}
+        function1={props.showProd}
+        function2={props.resetDetailProdVist}
       />
     </LayoutDiv>
   );

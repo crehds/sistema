@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import Icon from '../../reusables/components/Icon.jsx';
 import LayoutDiv from '../../reusables/components/LayoutDiv.jsx';
+import Settings from '../components/Settings.jsx';
 
 import '../css/userdata.css';
 
@@ -25,6 +26,8 @@ class UserData extends Component {
   };
 
   render() {
+    var { settings } = this.props.userData;
+    var { functionsSettings} = this.props;
     return (
       <LayoutDiv class={this.props.userData.class}>
         <Icon
@@ -38,10 +41,11 @@ class UserData extends Component {
           function={this.handleArrow}
         />
         {this.state.isOpen &&
-          <LayoutDiv class="login">
-            <p>Cambiar de usuario</p>
-            <p>Desloguearse</p>
-          </LayoutDiv>
+          <Settings
+            class={settings.class}
+            content={settings.content}
+            functionsSettings={functionsSettings}
+          />
         }
       </LayoutDiv>
     );

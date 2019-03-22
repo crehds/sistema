@@ -33,8 +33,8 @@ class ButtonEmitir extends Component {
       >
         <Buttons
           buttons={buttons}
-          downloadDocument={this.downloadDocument}
-          putDocument={this.props.putDocument}
+          function1={this.downloadDocument}
+          function2={this.props.putDocument}
         />
       </LayoutDiv>
     );
