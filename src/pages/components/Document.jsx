@@ -18,9 +18,11 @@ class DetailsDocument extends PureComponent {
     this.props.handleForm(this.state.references);
   }
 
+  /*Se obtienen la referencia de cada input para extraer el string ingresado*/
   setInputRef = element => this.state.references.push(element);
 
   render () {
+
     var {
       content,
       destinatario,
@@ -31,10 +33,10 @@ class DetailsDocument extends PureComponent {
         className={this.props.class}
         onSubmit={this.props.showInputs}
       >
-      {console.log(destinatario)}
+      {/*Se manejan y muestran los inputs del destinatario*/}
       { Object.keys(destinatario).map((e, i) => (
           <LayoutDiv
-            key={i}
+            key={`dest-${i}`}
             class={content.class}
           >
             <p>{e}</p>
@@ -46,9 +48,10 @@ class DetailsDocument extends PureComponent {
           </LayoutDiv>
         ))
       }
+      {/*Se manejan y muestran los inputs del documento*/}
       { Object.keys(content.inputs).map((e, i) => (
           <LayoutDiv
-            key={i}
+            key={`cont-${i}`}
             class={content.class}
           >
             <p>{e}</p>

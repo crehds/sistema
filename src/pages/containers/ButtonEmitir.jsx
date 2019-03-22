@@ -7,6 +7,8 @@ import jsPDF from 'jspdf';
 
 import '../css/buttonemitir.css';
 
+/*Contenedor de los botones maestros para Guardar en la base de datos
+y descargar el PDF*/
 class ButtonEmitir extends Component {
   downloadDocument = () => {
     const input = document.getElementById('previewVist');
@@ -30,9 +32,9 @@ class ButtonEmitir extends Component {
         class={this.props.buttonsEmitir.class}
       >
         <Buttons
-        buttons={buttons}
-        downloadDocument={this.downloadDocument}
-        putDocument={this.props.putDocument}
+          buttons={buttons}
+          downloadDocument={this.downloadDocument}
+          putDocument={this.props.putDocument}
         />
       </LayoutDiv>
     );

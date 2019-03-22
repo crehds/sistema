@@ -24,7 +24,7 @@ export default function IconNavBar(props) {
         onClick={props.handleContent}
       >
         <Icon
-          id= {`i-${props.name}`}
+          name= {`i-${props.name}`}
           class={props.iClass}
           title={props.name}
         />

@@ -15,3 +15,9 @@ SISTEMA
         -> Notification
         -> UserData
       ->Data
+        (Se empieza en emitir pero depende del NavBar)
+        ->Emitir
+          ->DetailsDocument
+          ->PDF
+          ->DetailsProd
+        ->Modificar

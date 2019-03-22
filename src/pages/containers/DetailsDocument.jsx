@@ -37,6 +37,8 @@ class DetailsDocument extends Component {
     event.target.reset();
   };
 
+  /*Define la data que obtendra el componente document como propiedad*/
+  /*Recibe un arreglo y el estado options*/
   defineDocument = (documents, state) => (
     documents.find(e => (
       e.description == state

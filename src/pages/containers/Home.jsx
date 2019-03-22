@@ -16,9 +16,9 @@ class Home extends Component {
 
   /*Cambiará el estado en base al string que le envie el NavBar*/
   /* Estados: Home, Emitir, Modificar*/
-  handleData = (string) => this.setState({
+  handleData = (string) => (this.setState({
       content: string,
-    }
+    })
   );
 
   render() {
@@ -28,10 +28,12 @@ class Home extends Component {
       <LayoutSection
         class="Home"
       >
+      {/*Barra de Navegación*/}
         <NavBar
           navBar={navBar}
           handleData={this.handleData}
         />
+        {/*Manejador del user bar y del contenido*/}
         <Data
           data={data}
           state={content}

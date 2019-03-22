@@ -3,9 +3,12 @@ import React, { Component } from 'react';
 import LayoutSection from '../../reusables/components/LayoutSection.jsx';
 import UserBar from '../../navigators/containers/UserBar.jsx';
 import Emitir from './Emitir.jsx';
+import Modificar from './Modificar.jsx';
 
 import '../css/data.css';
 
+/*Componente independiente que modifica su contenido dependiendo
+del icono seleccionado en el navBar*/
 class Data extends Component {
 
   state = {
@@ -16,7 +19,6 @@ class Data extends Component {
 
   /*Manejador de contenido*/
   handleContent = (state) => {
-    console.log(this.state.empresa);
     switch (state) {
       case 'Emitir':
         var { emitir } = this.props.data;
@@ -51,6 +53,9 @@ class Data extends Component {
       <LayoutSection
         class={this.props.data.class}
       >
+        {/*Barra con las opciones del Usuario.
+          Este componente se visualiza de manera global al
+          ingresar al Home*/}
         <UserBar
           class={userBar.class}
           image={userBar.image}
@@ -58,6 +63,7 @@ class Data extends Component {
           notification={userBar.notification}
           userData={userBar.userData}
         />
+        {/*Manejador de contenido(Data)*/}
         {this.handleContent(this.state.content)}
       </LayoutSection>
     );
