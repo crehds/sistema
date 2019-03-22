@@ -59,7 +59,7 @@ class Emitir extends Component {
       data.forEach(e => {
       var d = document.getElementById('detail-prod-vist');
       var div = document.createElement('div');
-      d.appendChild(div).classList.add('detalle-vist-detail');
+      d.appendChild(div).classList.add('detailProd-vist-detail');
       div.innerHTML = e;
       this.setDetailsProdRef(e);
     })
@@ -85,7 +85,7 @@ class Emitir extends Component {
   /*resetea la vista de productos*/
   resetDetailProdVist = () => {
     var d = document.getElementById('detail-prod-vist');
-    while (d.children.length != 1) {
+    while (d.children.length != 0) {
       d.removeChild(d.lastChild);
     }
   };
