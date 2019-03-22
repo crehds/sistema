@@ -21,7 +21,6 @@ class UserBar extends Component {
       unloggin,
       functionsSettings,
     } = this.props;
-    console.log(functionsSettings[0]);
     return (
       <LayoutDiv
         class={this.props.class}

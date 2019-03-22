@@ -52,7 +52,6 @@ class Data extends Component {
   render() {
     var { userBar } = this.props.data;
     var { functionsSettings } = this.state;
-    console.log(functionsSettings[0]);
     return (
       <LayoutSection
         class={this.props.data.class}
