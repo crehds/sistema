@@ -54,10 +54,13 @@ class Main extends Component {
     }
   };
 
+  /*Mostrará (futuro) el Perfil del usuario*/
   showProfile = () => (
     alert('En desarrollo')
   );
 
+  /*Cambia el estado para volver al login*/
+  /*Invoca al manejador de clases del Main*/
   unloggin = () => {
     this.setState({
       isLogging: false,
