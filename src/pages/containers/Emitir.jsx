@@ -12,7 +12,7 @@ class Emitir extends Component {
 
   state = {
     options: 'Cotización',
-    detailProd: [],//
+    detailProd: [],//contiene los datos antes de mostrarlos en tabla
     contentDestinatario: [],//contenido de Proveedor o cliente
     contentDocumento: [],//cotización o orden de compra
     templateDetailProd: [],
@@ -32,11 +32,20 @@ class Emitir extends Component {
 
   /*Obtiene los datos del documento (orden de compra o cotización)*/
   getContentDetailsDocument = (content) => {
-    console.log(content);
     this.setState({
       contentDestinatario: content.slice(0, 4).map(e => e.value),
       contentDocumento: content.slice(4).map(e => e.value),
     });
+  };
+
+  /*Verificará que se ingresen datos correctos*/
+  authenticationDetailsDocument = (content) => {
+    return content.every(e => e.value != '');
+  };
+
+  /*Recibe un string para mostrar como alerta*/
+  showError = (string) => {
+    alert(string);
   };
 
   /*Sirve para obtener las valores ingresados antes de clickear
@@ -48,10 +57,16 @@ class Emitir extends Component {
   /*Maneja la información que se muestra en cada detalle de producto*/
   /*(nombre,cantidad,precio) y los ingresa en un arreglo*/
   handleDetailProd = (event) => {
+    let { detailProd } = this.state;
     event.preventDefault();
-    let array = this.state.detailProd.map(e => e.value);
-    event.target.reset();
-    return this.createDetailProd(array);
+    if (this.authenticationDetailsDocument(detailProd)) {
+      let array = detailProd.map(e => e.value);
+      event.target.reset();
+      return this.createDetailProd(array);
+    } else {
+      let string = 'Hace falta completar algún campo en Producto';
+      this.showError(string);
+    }
   };
 
   /*crea un detalle de producto*/
@@ -59,7 +74,7 @@ class Emitir extends Component {
       data.forEach(e => {
       var d = document.getElementById('detail-prod-vist');
       var div = document.createElement('div');
-      d.appendChild(div).classList.add('detalle-vist-detail');
+      d.appendChild(div).classList.add('detailProd-vist-detail');
       div.innerHTML = e;
       this.setDetailsProdRef(e);
     })
@@ -85,7 +100,7 @@ class Emitir extends Component {
   /*resetea la vista de productos*/
   resetDetailProdVist = () => {
     var d = document.getElementById('detail-prod-vist');
-    while (d.children.length != 1) {
+    while (d.children.length != 0) {
       d.removeChild(d.lastChild);
     }
   };
@@ -118,6 +133,8 @@ class Emitir extends Component {
           detailsDocument={detailsDocument}
           handleOptions={this.handleOptions}
           getContentDetailsDocument={this.getContentDetailsDocument}
+          authenticationDetailsDocument={this.authenticationDetailsDocument}
+          showError={this.showError}
         />
         {/*Componente que define la estructura del pdf a descargar*/}
         <PDF

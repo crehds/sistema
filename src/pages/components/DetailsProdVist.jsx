@@ -8,7 +8,6 @@ import '../css/detailsprodvist.css';
 export default function DetailProdVist(props) {
   return (
     <LayoutDiv
-      id={props.id}
       class={props.class}
     >
       <LayoutDiv
@@ -22,6 +21,13 @@ export default function DetailProdVist(props) {
         </h1>
       ))}
       </LayoutDiv>
+      {/*Modificar la ruta de props.id en api*/}
+      <LayoutDiv
+        id={props.id}
+        class="detailProdVist-container"
+      >
+      </LayoutDiv>
+
     </LayoutDiv>
   );
 }

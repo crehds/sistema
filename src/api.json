@@ -285,12 +285,12 @@
             "buttons": [
               {
                 "id": "1",
-                "class": "detailProd-button",
+                "class": "detailsProd-button",
                 "value": "Agregar"
               },
               {
                 "id": "2",
-                "class": "detailProd-button",
+                "class": "detailsProd-button",
                 "value": "Resetear"
               }
             ]

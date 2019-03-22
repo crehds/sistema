@@ -15,6 +15,7 @@ export default function DetailsProd(props) {
     detailProdVist,
     detailsProdButton,
   } = props.detailsProd;
+
   return (
     <LayoutDiv
       class={props.detailsProd.class}

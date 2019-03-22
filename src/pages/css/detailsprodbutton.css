@@ -1,4 +1,7 @@
 .detailsProd-button {
-  margin-top:4px;
+  margin-top:5px;
   height:25px;
+}
+#Main > section > section.Data > section > div.DetailsProd > button:nth-child(4) {
+  margin-left: 15px;
 }

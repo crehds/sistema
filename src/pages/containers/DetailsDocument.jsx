@@ -33,8 +33,15 @@ class DetailsDocument extends Component {
   /*Limpia los campos*/
   showInputs = (event) => {
     event.preventDefault();
-    this.props.getContentDetailsDocument(this.state.content);
-    event.target.reset();
+    var { content } = this.state;
+
+    if (this.props.authenticationDetailsDocument(content)) {
+      this.props.getContentDetailsDocument(content);
+      event.target.reset();
+    } else {
+      var message = 'hacen falta ingresar datos en la sección de Emitir'
+      this.props.showError(message);
+    }
   };
 
   /*Define la data que obtendra el componente document como propiedad*/

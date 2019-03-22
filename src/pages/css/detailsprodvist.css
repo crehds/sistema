@@ -6,14 +6,35 @@
   box-sizing: border-box;
   box-shadow: 0 0 1px 3px rgba(220,220,220,.9);
   align-content: center;
-  max-height: 205px;
+  grid-template-rows: 20px 180px;
+  height: 202px;
   overflow-y: auto;
-  overflow-x: auto;
 }
 
 .detailProdVist-title {
-  display: flex;
-  justify-content: space-around;
   grid-column: 1 / 4;
-  max-width: 95%;
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr;
+  max-width: 99.97%;
+  border-bottom: 2px solid #200f08;
+}
+.detailProdVist-title h1 {
+  border-right: 3px solid #200f08;
+}
+
+.detailProdVist-container {
+  grid-column: 1 / 4;
+  display:grid;
+  grid-template-columns: 3fr 1fr 1fr;
+  grid-template-rows: repeat(8,20px);
+  max-height: 175px;
+  /* overflow-y: auto; */
+  max-width: 99.5%;
+  height: 100%;
+}
+
+.detailProd-vist-detail {
+  max-width: 100%;
+  box-shadow: 1px 1px 1px 1px #200f08;
+  height: 20px;
 }
