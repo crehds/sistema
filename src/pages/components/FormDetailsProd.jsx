@@ -6,6 +6,7 @@ import Button from '../../reusables/components/Button.jsx';
 
 import '../css/formdetailsprod.css';
 
+/*Formulario que envia los datos ingresados en cada input al componente Emitir y este al PDF*/
 export default function FormDetailsprod(props) {
   var {
     handleDetailProd,
@@ -35,6 +36,7 @@ export default function FormDetailsprod(props) {
         ))
       }
       </LayoutDiv>
+      {/*Botón de añadir datos*/}
       <Button
         class={detailsInputsButton.class}
         text={detailsInputsButton.value}

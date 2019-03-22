@@ -26,9 +26,9 @@ class NavBar extends Component {
   };
 
   /*Manejará que estado enviar al manejador de la data del component Home*/
-  handleContent= (event) => {
-    this.props.handleData(event.target.id.slice(2));
-  };
+  handleContent= (event) => (
+    this.props.handleData(event.target.id.slice(2))
+  );
 
   render() {
     var {

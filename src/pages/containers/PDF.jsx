@@ -22,6 +22,7 @@ class PDF extends PureComponent {
     }
   }
 
+  /*Manejador de los datos de la empresa*/
   empresaTitle= (empresa) => {
     var length = Object.values(empresa).length;
     var keys = Object.keys(empresa).slice(0, length - 2);
@@ -33,6 +34,7 @@ class PDF extends PureComponent {
     ));
   };
 
+  /*Manejador de los datos del destinatario*/
   pdfDestinatario = (destinatario) => {
     var template = ['R_U_T', 'Cliente', 'Contacto', 'Correo'];
     return destinatario.length != 0 ? Object.values(destinatario).map((e, i) => (
@@ -68,6 +70,8 @@ class PDF extends PureComponent {
         class={this.props.pdf.class}
         id={idHTML}
       >
+      {/*Contiene el logo y los datos de la empresa
+      se muestra en la parte superior del PDF*/}
         <EmpresaPDF
           class={dataEmpresaPDF.class}
           image={dataEmpresaPDF.image}
@@ -75,15 +79,20 @@ class PDF extends PureComponent {
           empresa={empresa}
           empresaTitle={this.empresaTitle}
         />
+        {/*Contiene los datos del destinatario y
+        se muestra en la parte de en medio del PDF*/}
         <DestinatarioPDF
           class={dataDestinatarioPDF.class}
           pdfDestinatario={this.pdfDestinatario}
           contentDestinatario={contentDestinatario}
         />
+        {/*Contiene los datos de cada final de producto y se muestra en la parte inferior del PDF*/}
         <ProdsPDF
           class={dataProdPDF.class}
           titlesProdPDF={dataProdPDF.titlesProdPDF}
         />
+        {/*Contiene datos calculados matemáticamente como el descuento y el IVR*/}
+        {/*Sin desarrollar*/}
         <LayoutDiv className="pdf-details">
           <div>Condiciones Generales</div>
           <div>IVA y Total</div>

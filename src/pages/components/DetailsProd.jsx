@@ -7,6 +7,8 @@ import DetailsProdButton from './DetailsProdButton.jsx';
 
 import '../css/detailsprod.css';
 
+/*Componente que contiene todo los inputs y data
+  para ingresar; y su posterior envío al PDF*/
 export default function DetailsProd(props) {
   var {
     formInputs,
@@ -17,6 +19,7 @@ export default function DetailsProd(props) {
     <LayoutDiv
       class={props.detailsProd.class}
     >
+      {/*Componente que muestra los inputs del destinatario y el documento*/}
       <FormDetailsProd
         class={formInputs.class}
         detailsInputs={formInputs.detailsInputs}
@@ -24,11 +27,14 @@ export default function DetailsProd(props) {
         detailsInputsButton={formInputs.detailsInputsButton}
         setDetRef={props.setDetRef}
       />
+      {/*Componente que muestra los inputs
+       para agregar un producto*/}
       <DetailsProdVist
         class={detailProdVist.class}
         id={detailProdVist.idHTML}
         detailProdVistTitles={detailProdVist.detailProdVistTitles}
       />
+      {/*Componente que contiene los botones que manejan la vista de los productos ingresados*/}
       <DetailsProdButton
         buttons={detailsProdButton.buttons}
         showProd={props.showProd}

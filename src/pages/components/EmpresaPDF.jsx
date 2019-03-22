@@ -5,6 +5,7 @@ import Image from '../../reusables/components/Image.jsx';
 
 import '../css/empresa-pdf.css';
 
+/*Contiene y muestra tanto el logo como los datos de la empresa*/
 export default function EmpresaPDF(props) {
   var { src, alt } = props.image;
   return (

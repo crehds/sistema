@@ -112,12 +112,14 @@ class Emitir extends Component {
       <LayoutSection
         class={this.props.emitir.class}
       >
+        {/*Contiene los datos para obtener el destinatario, documento, además de enviar la data a los estados de Emitir*/}
         <DetailsDocument
           options={this.state.options}
           detailsDocument={detailsDocument}
           handleOptions={this.handleOptions}
           getContentDetailsDocument={this.getContentDetailsDocument}
         />
+        {/*Componente que define la estructura del pdf a descargar*/}
         <PDF
           contentDocumento={contentDocumento}
           contentDestinatario={contentDestinatario}
@@ -126,6 +128,7 @@ class Emitir extends Component {
           empresa={empresa}
           usuario={usuario}
         />
+        {/*Contiene la seccion donde se ingresan y visualizan los productos*/}
         <DetailsProd
           setDetRef={this.setDetRef}
           detailsProd={detailsProd}
@@ -133,6 +136,8 @@ class Emitir extends Component {
           showProd={this.showProd}
           resetDetailProdVist={this.resetDetailProdVist}
         />
+        {/*Contenedor de los botones maestros
+          Guardar y Descargar*/}
         <ButtonEmitir
           buttonsEmitir={buttonsEmitir}
           putDocument={this.putDocument}
