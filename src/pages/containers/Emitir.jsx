@@ -39,9 +39,9 @@ class Emitir extends Component {
   };
 
   /*Verificará que se ingresen datos correctos*/
-  authenticationDetailsDocument = (content) => {
-    return content.every(e => e.value != '');
-  };
+  authenticationDetailsDocument = (content) => (
+    content.every(e => e.value != '') && content.length != 0
+  );
 
   /*Recibe un string para mostrar como alerta*/
   showError = (string) => {
@@ -90,18 +90,30 @@ class Emitir extends Component {
   /*Mostrará los datos en el PDF y limpiará la copia generada en setDetailsProdRef
   además de limpiar la vista de detalles de producto*/
   showProd = () => {
-    this.setState({
-      prods: this.state.templateProd,
-      templateDetailProd: [],
-    });
-    this.resetDetailProdVist();
+    if (this.authenticationDetailsDocument(this.state.prods)) {
+      this.setState({
+        prods: this.state.templateProd,
+        templateDetailProd: [],
+      });
+      this.resetDetailProdVist();
+    } else {
+      let string = 'No hay nada que añadir en la vista de detalle';
+      this.showError(string);
+    }
   };
 
   /*resetea la vista de productos*/
   resetDetailProdVist = () => {
     var d = document.getElementById('detail-prod-vist');
-    while (d.children.length != 0) {
-      d.removeChild(d.lastChild);
+    /*Se convierte un HTMLcollection en un array con "..."*/
+    var arr = [...d.children];
+    if (this.authenticationDetailsDocument(arr)) {
+      while (d.children.length != 0) {
+        d.removeChild(d.lastChild);
+      }
+    } else {
+      let string = 'No hay detalles para eliminar';
+      this.showError(string);
     }
   };
 
