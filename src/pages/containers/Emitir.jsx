@@ -32,11 +32,23 @@ class Emitir extends Component {
 
   /*Obtiene los datos del documento (orden de compra o cotización)*/
   getContentDetailsDocument = (content) => {
-    console.log(content);
-    this.setState({
-      contentDestinatario: content.slice(0, 4).map(e => e.value),
-      contentDocumento: content.slice(4).map(e => e.value),
-    });
+    if (this.authenticationDetailsDocument(content)) {
+      this.setState({
+        contentDestinatario: content.slice(0, 4).map(e => e.value),
+        contentDocumento: content.slice(4).map(e => e.value),
+      });
+    } else {
+      this.showError();
+    }
+  };
+
+  /*Verificará que se ingresen datos correctos*/
+  authenticationDetailsDocument = (content) => {
+    return content.every(e => e.value != '');
+  };
+
+  showError = () => {
+    alert('Hacen falta ingresar datos en la sección Emitir');
   };
 
   /*Sirve para obtener las valores ingresados antes de clickear
