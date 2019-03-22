@@ -11,8 +11,3 @@
   box-shadow: 1px 1px 1px 1px #200f08;
   height: 20px;
 }
-
-
-body > div:nth-child(1) > section > section > section.Emitir > div.DetailsProd > button:nth-child(4) {
-  margin-left: 15px;
-}

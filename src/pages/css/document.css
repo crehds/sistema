@@ -5,6 +5,7 @@
   grid-row-gap: 10px;
   font-size: 12px;
   height: 100%;
+  width:97%;
   overflow-y: auto;
 }
 
@@ -21,6 +22,6 @@
 
 .option-button {
   grid-column: 1 / -1;
-  margin-left: 35%;
-  margin-right: 35%;
+  margin-left: 40%;
+  margin-right: 40%;
 }
