@@ -15,6 +15,10 @@ class Data extends Component {
     content: this.props.state,
     empresa: this.props.empresa,
     usuario: this.props.usuario,
+    functionsSettings: [
+      this.props.showProfile,
+      this.props.unloggin,
+    ],
   };
 
   /*Manejador de contenido*/
@@ -46,9 +50,9 @@ class Data extends Component {
   }
 
   render() {
-    var {
-      userBar,
-    } = this.props.data;
+    var { userBar } = this.props.data;
+    var { functionsSettings } = this.state;
+    console.log(functionsSettings[0]);
     return (
       <LayoutSection
         class={this.props.data.class}
@@ -62,6 +66,7 @@ class Data extends Component {
           search={userBar.search}
           notification={userBar.notification}
           userData={userBar.userData}
+          functionsSettings={functionsSettings}
         />
         {/*Manejador de contenido(Data)*/}
         {this.handleContent(this.state.content)}
