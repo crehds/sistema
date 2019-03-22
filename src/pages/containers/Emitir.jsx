@@ -12,7 +12,7 @@ class Emitir extends Component {
 
   state = {
     options: 'Cotización',
-    detailProd: [],//
+    detailProd: [],//contiene los datos antes de mostrarlos en tabla
     contentDestinatario: [],//contenido de Proveedor o cliente
     contentDocumento: [],//cotización o orden de compra
     templateDetailProd: [],
