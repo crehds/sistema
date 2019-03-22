@@ -23,7 +23,14 @@ class Home extends Component {
 
   render() {
     var { content } = this.state;
-    var { navBar, data, dataDb } = this.props;
+    var {
+      navBar,
+      data,
+      dataDb,
+      unloggin,
+      showProfile,
+    } = this.props;
+    // console.log(unloggin, showProfile);
     return (
       <LayoutSection
         class="Home"
@@ -39,6 +46,8 @@ class Home extends Component {
           state={content}
           empresa={dataDb.empresa}
           usuario={dataDb.usuario}
+          unloggin={unloggin}
+          showProfile={showProfile}
         />
       </LayoutSection>
     );
