@@ -33,8 +33,13 @@ class DetailsDocument extends Component {
   /*Limpia los campos*/
   showInputs = (event) => {
     event.preventDefault();
-    this.props.getContentDetailsDocument(this.state.content);
-    event.target.reset();
+    var { content } = this.state;
+    if (this.props.authenticationDetailsDocument(content)) {
+      this.props.getContentDetailsDocument(content);
+      event.target.reset();
+    } else {
+      this.props.showError();
+    }
   };
 
   /*Define la data que obtendra el componente document como propiedad*/

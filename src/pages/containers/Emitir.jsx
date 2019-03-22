@@ -32,14 +32,10 @@ class Emitir extends Component {
 
   /*Obtiene los datos del documento (orden de compra o cotización)*/
   getContentDetailsDocument = (content) => {
-    if (this.authenticationDetailsDocument(content)) {
-      this.setState({
-        contentDestinatario: content.slice(0, 4).map(e => e.value),
-        contentDocumento: content.slice(4).map(e => e.value),
-      });
-    } else {
-      this.showError();
-    }
+    this.setState({
+      contentDestinatario: content.slice(0, 4).map(e => e.value),
+      contentDocumento: content.slice(4).map(e => e.value),
+    });
   };
 
   /*Verificará que se ingresen datos correctos*/
@@ -130,6 +126,8 @@ class Emitir extends Component {
           detailsDocument={detailsDocument}
           handleOptions={this.handleOptions}
           getContentDetailsDocument={this.getContentDetailsDocument}
+          authenticationDetailsDocument={this.authenticationDetailsDocument}
+          showError={this.showError}
         />
         {/*Componente que define la estructura del pdf a descargar*/}
         <PDF
