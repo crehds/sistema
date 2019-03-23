@@ -44,8 +44,15 @@ class Emitir extends Component {
   );
 
   /*Recibe un string para mostrar como alerta*/
-  showError = (string) => {
-    alert(string);
+  showError = (string, event) => {
+    /*Se elimina "-button" para obtener el id donde
+    añadir el borde de feedback*/
+    let id = event.target.id.replace(/-button/g, '');
+    let d = document.getElementById(id);
+
+    /*Se añade borde para visualización del usuario*/
+    this.props.handleBorderFeedBack(d);
+    setTimeout((string) => alert(string), 150, string);
   };
 
   /*Sirve para obtener las valores ingresados antes de clickear
@@ -65,7 +72,7 @@ class Emitir extends Component {
       return this.createDetailProd(array);
     } else {
       let string = 'Hace falta completar algún campo en Producto';
-      this.showError(string);
+      this.showError(string, event);
     }
   };
 
@@ -89,7 +96,7 @@ class Emitir extends Component {
 
   /*Mostrará los datos en el PDF y limpiará la copia generada en setDetailsProdRef
   además de limpiar la vista de detalles de producto*/
-  showProd = () => {
+  showProd = (event) => {
     if (this.authenticationDetailsDocument(this.state.prods)) {
       this.setState({
         prods: this.state.templateProd,
@@ -98,12 +105,12 @@ class Emitir extends Component {
       this.resetDetailProdVist();
     } else {
       let string = 'No hay nada que añadir en la vista de detalle';
-      this.showError(string);
+      this.showError(string, event);
     }
   };
 
   /*resetea la vista de productos*/
-  resetDetailProdVist = () => {
+  resetDetailProdVist = (event) => {
     var d = document.getElementById('detail-prod-vist');
     /*Se convierte un HTMLcollection en un array con "..."*/
     var arr = [...d.children];
@@ -113,7 +120,7 @@ class Emitir extends Component {
       }
     } else {
       let string = 'No hay detalles para eliminar';
-      this.showError(string);
+      this.showError(string, event);
     }
   };
 
@@ -135,6 +142,7 @@ class Emitir extends Component {
       buttonsEmitir,
     } = this.props.emitir;
 
+    console.log(this.props);
     return (
       <LayoutSection
         class={this.props.emitir.class}

@@ -1,0 +1,5 @@
+.border-feedback {
+  border: 3px solid rgba(64,48,13,0.84);
+  transition: .10s;
+  position: relative;
+}
