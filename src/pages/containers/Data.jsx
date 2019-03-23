@@ -6,6 +6,7 @@ import Emitir from './Emitir.jsx';
 import Modificar from './Modificar.jsx';
 
 import '../css/data.css';
+import '../css/border-feedback.css';
 
 /*Componente independiente que modifica su contenido dependiendo
 del icono seleccionado en el navBar*/
@@ -23,6 +24,7 @@ class Data extends Component {
 
   /*Manejador de contenido*/
   handleContent = (state) => {
+    var { handleBorderFeedBack } = this.props;
     switch (state) {
       case 'Emitir':
         var { emitir } = this.props.data;
@@ -30,6 +32,7 @@ class Data extends Component {
                   emitir={emitir}
                   empresa={this.state.empresa}
                   usuario={this.state.usuario}
+                  handleBorderFeedBack={handleBorderFeedBack}
                 />);
       case 'Modificar':
         var { modificar } = this.props.data;
@@ -37,6 +40,7 @@ class Data extends Component {
                   modificar={modificar}
                   empresa={this.state.empresa}
                   usuario={this.state.usuario}
+                  handleBorderFeedBack={handleBorderFeedBack}
                 />);
     }
   };

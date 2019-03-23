@@ -22,6 +22,7 @@ export default function DetailsProd(props) {
     >
       {/*Componente que muestra los inputs del destinatario y el documento*/}
       <FormDetailsProd
+        id={formInputs.idHTML}
         class={formInputs.class}
         detailsInputs={formInputs.detailsInputs}
         handleDetailProd={props.handleDetailProd}

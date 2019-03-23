@@ -21,6 +21,13 @@ class Home extends Component {
     })
   );
 
+  /*Representa la animación de borde donde se encuentre un error*/
+  handleBorderFeedBack = (element) => {
+    console.log(element);
+    element.classList.add('border-feedback');
+    setTimeout((element) =>  element.classList.remove('border-feedback'), 2000, element);
+  };
+
   render() {
     var { content } = this.state;
     var {
@@ -48,6 +55,7 @@ class Home extends Component {
           usuario={dataDb.usuario}
           unloggin={unloggin}
           showProfile={showProfile}
+          handleBorderFeedBack={this.handleBorderFeedBack}
         />
       </LayoutSection>
     );

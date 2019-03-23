@@ -40,7 +40,7 @@ class DetailsDocument extends Component {
       event.target.reset();
     } else {
       var message = 'hacen falta ingresar datos en la sección de Emitir'
-      this.props.showError(message);
+      this.props.showError(message, event);
     }
   };
 
@@ -69,6 +69,7 @@ class DetailsDocument extends Component {
           handleOptions={this.props.handleOptions}
         />
         <Document
+          id={document.idHTML}
           class={document.class}
           destinatario={document.destinatario}
           content={this.defineDocument(document.documents, options)}
