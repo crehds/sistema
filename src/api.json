@@ -120,6 +120,7 @@
           "document": {
             "id": "2",
             "class": "form-document",
+            "idHTML": "form-document",
             "destinatario": {
               "Destinatario": "empresa/persona",
               "R_U_T": "del destinatario",
@@ -155,6 +156,7 @@
             ],
             "buttonDocument": {
               "id": "3",
+              "idHTML":"form-document-button",
               "class": "option-button",
               "value": "Añadir datos"
             }
@@ -227,6 +229,7 @@
           "formInputs": {
             "id": "1",
             "class": "detailProd-formInput",
+            "idHTML": "detailProd-formInput",
             "detailsInputs": {
               "id": "1",
               "class": "detailProd-formInput-spans",
@@ -253,6 +256,7 @@
             },
             "detailsInputsButton": {
               "id": "2",
+              "idHTML": "detailProd-formInput-button",
               "class": "detailProd-formButton",
               "value": "Agregar Producto"
             }
@@ -285,11 +289,13 @@
             "buttons": [
               {
                 "id": "1",
+                "idHTML":"detail-prod-vist-button",
                 "class": "detailsProd-button",
                 "value": "Agregar"
               },
               {
                 "id": "2",
+                "idHTML":"detail-prod-vist-button",
                 "class": "detailsProd-button",
                 "value": "Resetear"
               }
