@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import swal from 'sweetalert';
 
 import LayoutSection from '../../reusables/components/LayoutSection.jsx';
 import DetailsDocument from './DetailsDocument.jsx';
@@ -51,8 +52,13 @@ class Emitir extends Component {
     let d = document.getElementById(id);
 
     /*Se añade borde para visualización del usuario*/
-    this.props.handleBorderFeedBack(d);
-    setTimeout((string) => alert(string), 150, string);
+    setTimeout((string) => swal(string, {
+      icon: 'error',
+      buttons: false,
+      timer: 1000,
+    }).then(() => this.props.handleBorderFeedBack(d)), 250, string);
+    /*El primer timer es de la duración del modal antes de cerrarse
+    el segundo corresponde a que tan rápido aparece este modal*/
   };
 
   /*Sirve para obtener las valores ingresados antes de clickear
@@ -124,7 +130,11 @@ class Emitir extends Component {
     }
   };
 
-  putDocument = () => alert('En desarrollo');
+  putDocument = () => swal('En desarrollo', {
+    icon: 'info',
+    buttons: false,
+    timer: 1000,
+  });
 
   render() {
     var {
