@@ -86,7 +86,7 @@ class Emitir extends Component {
   /*crea un detalle de producto*/
   createDetailProd = (data) => (
       data.forEach(e => {
-      var d = document.getElementById('detail-prod-vist');
+      var d = document.getElementById('detailProdVist-container');
       var div = document.createElement('div');
       d.appendChild(div).classList.add('detailProd-vist-detail');
       div.innerHTML = e;
@@ -104,9 +104,9 @@ class Emitir extends Component {
   /*Mostrará los datos en el PDF y limpiará la copia generada en setDetailsProdRef
   además de limpiar la vista de detalles de producto*/
   showProd = (event) => {
-    if (this.authenticationDetailsDocument(this.state.prods)) {
+    if (this.authenticationDetailsDocument(this.state.templateDetailProd)) {
       this.setState({
-        prods: this.state.templateProd,
+        prods: this.state.templateDetailProd,
         templateDetailProd: [],
       });
       this.resetDetailProdVist();
@@ -118,7 +118,7 @@ class Emitir extends Component {
 
   /*resetea la vista de productos*/
   resetDetailProdVist = (event) => {
-    var d = document.getElementById('detail-prod-vist');
+    var d = document.getElementById('detailProdVist-container');
     /*Se convierte un HTMLcollection en un array con "..."*/
     var arr = [...d.children];
     if (this.authenticationDetailsDocument(arr)) {

@@ -36,6 +36,7 @@ export default function DetailsProd(props) {
         class={detailProdVist.class}
         id={detailProdVist.idHTML}
         detailProdVistTitles={detailProdVist.detailProdVistTitles}
+        detailProdVistContainers={detailProdVist.detailProdVistContainers}
       />
       {/*Componente que contiene los botones que manejan la vista de los productos ingresados*/}
       <DetailsProdButton
