@@ -282,6 +282,11 @@
                   "title": "Precio"
                 }
               ]
+            },
+            "detailProdVistContainers": {
+              "id":"2",
+              "idHTML":"detailProdVist-container",
+              "class":"detailProdVist-container"
             }
           },
           "detailsProdButton": {
