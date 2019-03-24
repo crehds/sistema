@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 
-import LayoutDiv from '../../reusables/components/LayoutDiv.jsx';
 import SelectDetails from '../components/SelectDetails.jsx';
 import Document from '../components/Document.jsx';
+
+import LayoutDiv from '../../reusables/components/LayoutDiv.jsx';
 
 import '../css/detailsdocument.css';
 

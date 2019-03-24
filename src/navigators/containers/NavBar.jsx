@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 
 import LayoutSection from '../../reusables/components/LayoutSection.jsx';
 import Button from '../../reusables/components/Button.jsx';
-
 import IconNavBar from '../components/IconNavBar.jsx';
 
 import '../css/navbar.css';

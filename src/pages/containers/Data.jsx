@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 
-import LayoutSection from '../../reusables/components/LayoutSection.jsx';
 import UserBar from '../../navigators/containers/UserBar.jsx';
 import Emitir from './Emitir.jsx';
 import Modificar from './Modificar.jsx';
+
+import LayoutSection from '../../reusables/components/LayoutSection.jsx';
 
 import '../css/data.css';
 import '../css/border-feedback.css';
