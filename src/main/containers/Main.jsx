@@ -12,7 +12,7 @@ class Main extends Component {
 
   state = {
     //modificar a true si se desea obviar el loggin al debugear
-    isLogging: true,
+    isLogging: false,
   };
 
   /*El componente Main tendrá una segunda clase que se modificará dependiendo
@@ -63,7 +63,11 @@ class Main extends Component {
 
   /*Mostrará (futuro) el Perfil del usuario*/
   showProfile = () => (
-    swal('En desarrollo', { icon: 'info' })
+    swal('En desarrollo', {
+      icon: 'info',
+      buttons: false,
+      timer: 1000,
+    })
   );
 
   /*Cambia el estado para volver al login*/
