@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 
-import LayoutDiv from '../../reusables/components/LayoutDiv.jsx';
 import Search from '../components/Search.jsx';
 import Notification from '../components/Notification.jsx';
 import UserData from './UserData.jsx';
+
+import LayoutDiv from '../../reusables/components/LayoutDiv.jsx';
 import Image from '../../reusables/components/Image.jsx';
 
 import logo from '../../assets/images/logo1.png';

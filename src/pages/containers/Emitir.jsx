@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import swal from 'sweetalert';
 
-import LayoutSection from '../../reusables/components/LayoutSection.jsx';
 import DetailsDocument from './DetailsDocument.jsx';
 import DetailsProd from '../components/DetailsProd.jsx';
 import PDF from './PDF.jsx';
 import ButtonEmitir from './ButtonEmitir.jsx';
+
+import LayoutSection from '../../reusables/components/LayoutSection.jsx';
 
 import '../css/emitir.css';
 
@@ -152,7 +153,6 @@ class Emitir extends Component {
       buttonsEmitir,
     } = this.props.emitir;
 
-    console.log(this.props);
     return (
       <LayoutSection
         class={this.props.emitir.class}

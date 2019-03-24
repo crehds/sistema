@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import swal from 'sweetalert';
 
-import LayoutSection from '../../reusables/components/LayoutSection.jsx';
-
 import Login from '../../login/containers/Login.jsx';
 import Home from '../../pages/containers/Home.jsx';
+
+import LayoutSection from '../../reusables/components/LayoutSection.jsx';
+
 
 import '../css/main.css';
 
@@ -53,7 +54,6 @@ class Main extends Component {
         buttons: false,
         timer: 1000,
       });
-      swal.close();
       this.setState({
         isLogging: true,
       });

@@ -1,9 +1,10 @@
 import React from 'react';
 
-import LayoutDiv from '../../reusables/components/LayoutDiv.jsx';
 import FormDetailsProd from './FormDetailsProd.jsx';
 import DetailsProdVist from './DetailsProdVist.jsx';
 import DetailsProdButton from './DetailsProdButton.jsx';
+
+import LayoutDiv from '../../reusables/components/LayoutDiv.jsx';
 
 import '../css/detailsprod.css';
 

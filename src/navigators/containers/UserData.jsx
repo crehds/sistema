@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 
+import Settings from '../components/Settings.jsx';
+
 import Icon from '../../reusables/components/Icon.jsx';
 import LayoutDiv from '../../reusables/components/LayoutDiv.jsx';
-import Settings from '../components/Settings.jsx';
 
 import '../css/userdata.css';
 
