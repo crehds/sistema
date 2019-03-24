@@ -104,9 +104,9 @@ class Emitir extends Component {
   /*Mostrará los datos en el PDF y limpiará la copia generada en setDetailsProdRef
   además de limpiar la vista de detalles de producto*/
   showProd = (event) => {
-    if (this.authenticationDetailsDocument(this.state.prods)) {
+    if (this.authenticationDetailsDocument(this.state.templateDetailProd)) {
       this.setState({
-        prods: this.state.templateProd,
+        prods: this.state.templateDetailProd,
         templateDetailProd: [],
       });
       this.resetDetailProdVist();
