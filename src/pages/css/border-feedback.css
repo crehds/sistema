@@ -1,5 +1,30 @@
 .border-feedback {
-  border: 3px solid rgba(64,48,13,0.84);
   transition: .10s;
+  animation-name: appearToDissaper;
+  animation-duration: 2s;
   position: relative;
+}
+
+@keyframes appearToDissaper {
+  0% {
+    border: 3px solid rgba(64,48,13,0.84);
+  }
+  15% {
+    border: 3px solid rgba(64,48,13,0.2);
+  }
+  25% {
+    border: 3px solid rgba(64,48,13,0.84);
+  }
+  40% {
+    border: 3px solid rgba(64,48,13,0.2);
+  }
+  60% {
+    border: 3px solid rgba(64,48,13,0.84);
+  }
+  80% {
+    border: 3px solid rgba(64,48,13,0.2);
+  }
+  100% {
+    border: 3px solid rgba(64,48,13,0.84);
+  }
 }
