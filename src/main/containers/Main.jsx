@@ -12,7 +12,7 @@ class Main extends Component {
 
   state = {
     //modificar a true si se desea obviar el loggin al debugear
-    isLogging: false,
+    isLogging: true,
   };
 
   /*El componente Main tendrá una segunda clase que se modificará dependiendo
@@ -48,7 +48,12 @@ class Main extends Component {
     if (bool == false)
       swal('Datos incorrectos', { icon: 'error' });
     else {
-      await swal('Datos Confirmados!!', { icon: 'success' });
+      await swal('Datos Confirmados!!', {
+        icon: 'success',
+        buttons: false,
+        timer: 1000,
+      });
+      swal.close();
       this.setState({
         isLogging: true,
       });
