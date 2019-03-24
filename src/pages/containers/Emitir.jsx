@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
+import swal from 'sweetalert';
 
-import LayoutSection from '../../reusables/components/LayoutSection.jsx';
 import DetailsDocument from './DetailsDocument.jsx';
 import DetailsProd from '../components/DetailsProd.jsx';
 import PDF from './PDF.jsx';
 import ButtonEmitir from './ButtonEmitir.jsx';
+
+import LayoutSection from '../../reusables/components/LayoutSection.jsx';
 
 import '../css/emitir.css';
 
@@ -39,13 +41,25 @@ class Emitir extends Component {
   };
 
   /*Verificará que se ingresen datos correctos*/
-  authenticationDetailsDocument = (content) => {
-    return content.every(e => e.value != '');
-  };
+  authenticationDetailsDocument = (content) => (
+    content.every(e => e.value != '') && content.length != 0
+  );
 
   /*Recibe un string para mostrar como alerta*/
-  showError = (string) => {
-    alert(string);
+  showError = (string, event) => {
+    /*Se elimina "-button" para obtener el id donde
+    añadir el borde de feedback*/
+    let id = event.target.id.replace(/-button/g, '');
+    let d = document.getElementById(id);
+
+    /*Se añade borde para visualización del usuario*/
+    setTimeout((string) => swal(string, {
+      icon: 'error',
+      buttons: false,
+      timer: 1000,
+    }).then(() => this.props.handleBorderFeedBack(d)), 250, string);
+    /*El primer timer es de la duración del modal antes de cerrarse
+    el segundo corresponde a que tan rápido aparece este modal*/
   };
 
   /*Sirve para obtener las valores ingresados antes de clickear
@@ -65,7 +79,7 @@ class Emitir extends Component {
       return this.createDetailProd(array);
     } else {
       let string = 'Hace falta completar algún campo en Producto';
-      this.showError(string);
+      this.showError(string, event);
     }
   };
 
@@ -89,23 +103,39 @@ class Emitir extends Component {
 
   /*Mostrará los datos en el PDF y limpiará la copia generada en setDetailsProdRef
   además de limpiar la vista de detalles de producto*/
-  showProd = () => {
-    this.setState({
-      prods: this.state.templateProd,
-      templateDetailProd: [],
-    });
-    this.resetDetailProdVist();
-  };
-
-  /*resetea la vista de productos*/
-  resetDetailProdVist = () => {
-    var d = document.getElementById('detail-prod-vist');
-    while (d.children.length != 0) {
-      d.removeChild(d.lastChild);
+  showProd = (event) => {
+    if (this.authenticationDetailsDocument(this.state.prods)) {
+      this.setState({
+        prods: this.state.templateProd,
+        templateDetailProd: [],
+      });
+      this.resetDetailProdVist();
+    } else {
+      let string = 'No hay nada que añadir en la vista de detalle';
+      this.showError(string, event);
     }
   };
 
-  putDocument = () => alert('En desarrollo');
+  /*resetea la vista de productos*/
+  resetDetailProdVist = (event) => {
+    var d = document.getElementById('detail-prod-vist');
+    /*Se convierte un HTMLcollection en un array con "..."*/
+    var arr = [...d.children];
+    if (this.authenticationDetailsDocument(arr)) {
+      while (d.children.length != 0) {
+        d.removeChild(d.lastChild);
+      }
+    } else {
+      let string = 'No hay detalles para eliminar';
+      this.showError(string, event);
+    }
+  };
+
+  putDocument = () => swal('En desarrollo', {
+    icon: 'info',
+    buttons: false,
+    timer: 1000,
+  });
 
   render() {
     var {

@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 
-import LayoutDiv from '../../reusables/components/LayoutDiv.jsx';
 import SelectDetails from '../components/SelectDetails.jsx';
 import Document from '../components/Document.jsx';
+
+import LayoutDiv from '../../reusables/components/LayoutDiv.jsx';
 
 import '../css/detailsdocument.css';
 
@@ -40,7 +41,7 @@ class DetailsDocument extends Component {
       event.target.reset();
     } else {
       var message = 'hacen falta ingresar datos en la sección de Emitir'
-      this.props.showError(message);
+      this.props.showError(message, event);
     }
   };
 
@@ -69,6 +70,7 @@ class DetailsDocument extends Component {
           handleOptions={this.props.handleOptions}
         />
         <Document
+          id={document.idHTML}
           class={document.class}
           destinatario={document.destinatario}
           content={this.defineDocument(document.documents, options)}

@@ -1,10 +1,11 @@
 import React, { PureComponent } from 'react';
 
-import LayoutSection from '../../reusables/components/LayoutSection.jsx';
-import LayoutDiv from '../../reusables/components/LayoutDiv.jsx';
 import EmpresaPDF from '../components/EmpresaPDF.jsx';
 import DestinatarioPDF from '../components/DestinatarioPDF.jsx';
 import ProdsPDF from '../components/ProdsPDF.jsx';
+
+import LayoutSection from '../../reusables/components/LayoutSection.jsx';
+import LayoutDiv from '../../reusables/components/LayoutDiv.jsx';
 
 import '../css/pdf.css';
 

@@ -75,6 +75,7 @@ class DetailsDocument extends PureComponent {
     var { content } = this.state;
     return (
       <form
+        id={this.props.id}
         className={this.props.class}
         onSubmit={this.props.showInputs}
       >

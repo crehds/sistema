@@ -1,9 +1,10 @@
 import React from 'react';
 
-import LayoutDiv from '../../reusables/components/LayoutDiv.jsx';
 import FormDetailsProd from './FormDetailsProd.jsx';
 import DetailsProdVist from './DetailsProdVist.jsx';
 import DetailsProdButton from './DetailsProdButton.jsx';
+
+import LayoutDiv from '../../reusables/components/LayoutDiv.jsx';
 
 import '../css/detailsprod.css';
 
@@ -22,6 +23,7 @@ export default function DetailsProd(props) {
     >
       {/*Componente que muestra los inputs del destinatario y el documento*/}
       <FormDetailsProd
+        id={formInputs.idHTML}
         class={formInputs.class}
         detailsInputs={formInputs.detailsInputs}
         handleDetailProd={props.handleDetailProd}

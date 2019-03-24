@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
+import html2canvas from 'html2canvas';
+import jsPDF from 'jspdf';
 
 import LayoutDiv from '../../reusables/components/LayoutDiv.jsx';
 import Buttons from '../components/DetailsProdButton.jsx';
-import html2canvas from 'html2canvas';
-import jsPDF from 'jspdf';
 
 import '../css/buttonemitir.css';
 
@@ -33,8 +33,8 @@ class ButtonEmitir extends Component {
       >
         <Buttons
           buttons={buttons}
-          function1={this.downloadDocument}
-          function2={this.props.putDocument}
+          function1={this.props.putDocument}
+          function2={this.downloadDocument}
         />
       </LayoutDiv>
     );

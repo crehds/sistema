@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
-
-import LayoutSection from '../../reusables/components/LayoutSection.jsx';
+import swal from 'sweetalert';
 
 import Login from '../../login/containers/Login.jsx';
 import Home from '../../pages/containers/Home.jsx';
+
+import LayoutSection from '../../reusables/components/LayoutSection.jsx';
+
 
 import '../css/main.css';
 
@@ -43,10 +45,15 @@ class Main extends Component {
 
   /*Verifica el estado del componente para mostrar un error de login o
     mostrar la home */
-  handleLoggin = (bool) => {
+  handleLoggin = async (bool) => {
     if (bool == false)
-      alert('Datos incorrectos');
+      swal('Datos incorrectos', { icon: 'error' });
     else {
+      await swal('Datos Confirmados!!', {
+        icon: 'success',
+        buttons: false,
+        timer: 1000,
+      });
       this.setState({
         isLogging: true,
       });
@@ -56,16 +63,28 @@ class Main extends Component {
 
   /*Mostrará (futuro) el Perfil del usuario*/
   showProfile = () => (
-    alert('En desarrollo')
+    swal('En desarrollo', {
+      icon: 'info',
+      buttons: false,
+      timer: 1000,
+    })
   );
 
   /*Cambia el estado para volver al login*/
   /*Invoca al manejador de clases del Main*/
-  unloggin = () => {
-    this.setState({
-      isLogging: false,
+  unloggin = async () => {
+    await swal('Confirme su fin de sesión', {
+      icon: 'warning',
+      buttons: ['Salir', 'Seguir conectado'],
+    }).then(response => {
+      /*Si se retorna null o false(button Salir)*/
+      if (!response) {
+        this.setState({
+          isLogging: false,
+        });
+        this.addClassMain(false);
+      }
     });
-    this.addClassMain(false);
   };
 
   render() {

@@ -15,6 +15,7 @@ export default function FormDetailsprod(props) {
   } = props;
   return (
     <form
+      id={props.id}
       className={props.class}
       onSubmit={handleDetailProd}
     >

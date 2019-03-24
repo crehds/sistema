@@ -9,10 +9,11 @@ import '../css/detailsprodbutton.css';
 export default function Buttons(props) {
   return (
     props.buttons.map((e, i) => {
-      if (i == 1) {
+      if (i == 0) {
         return (
           <Button
             key={e.id}
+            id={e.idHTML}
             class={e.class}
             text={e.value}
             functionClick={props.function1}
@@ -22,6 +23,7 @@ export default function Buttons(props) {
         return (
           <Button
             key={e.id}
+            id={e.idHTML}
             class={e.class}
             text={e.value}
             functionClick={props.function2}
