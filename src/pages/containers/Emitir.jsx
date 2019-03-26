@@ -107,9 +107,8 @@ class Emitir extends Component {
     if (this.authenticationDetailsDocument(this.state.templateDetailProd)) {
       this.setState({
         prods: this.state.templateDetailProd,
-        templateDetailProd: [],
       });
-      this.resetDetailProdVist();
+      this.resetDetailProdVist(event);
     } else {
       let string = 'No hay nada que añadir en la vista de detalle';
       this.showError(string, event);
@@ -122,6 +121,9 @@ class Emitir extends Component {
     /*Se convierte un HTMLcollection en un array con "..."*/
     var arr = [...d.children];
     if (this.authenticationDetailsDocument(arr)) {
+      this.setState({
+        templateDetailProd: [],
+      });
       while (d.children.length != 0) {
         d.removeChild(d.lastChild);
       }
