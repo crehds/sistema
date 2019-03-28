@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../css/detallemod.css';
 
+/*Vista detallada de los productos*/
 class DetalleMod extends Component {
   render() {
     return (

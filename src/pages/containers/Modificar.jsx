@@ -20,17 +20,20 @@ class Modificar extends Component {
     referencesRelative: [],
   };
 
+  /*Manejará los datos ingresados para modificar el documento*/
   handleForm = (event) => {
     event.preventDefault();
     return console.log(event);
   };
 
+  /*Manejador de las references de cada input*/
   handleReferences = (data) => (
     this.setState({
       referencesRelative: data,
     })
   );
 
+  /*Maneja el combobox maestro*/
   handleOptions = (event) => (
     this.setState({
       options: event.target.value,
@@ -41,25 +44,32 @@ class Modificar extends Component {
 
   render() {
     var cotizaOptions = {
-      'Condicion de pago': 'Mínimo 5 días',
+      'Condición de pago': 'Mínimo 5 días',
       'Validez de oferta': 'Mínimo 7 días',
       'Tiempo de entrega': 'Máximo 30 días',
       'Lugar de entrega': 'Lugar de entrega',
+      'Descuento ': 'Se descontará al total',
     };
 
     var orderOptions = {
-      'Fecha de pedido': 'El día puede variar al actual',
-      'Fecha de pago': 'Ingrese el día acordado',
-      'Términos de entrega': 'Establezca los términos',
+      'Condición de pago': 'Mínimo una semana',
+      'MonedaYTC': 'pesos o dólares',
+      'Lugar de entrega': 'Lugar de entrega',
+      'Plazo de entrega': 'Máximo 30 días',
+      'Referencia': 'Cotización del proveedor',
+      'Giro': 'Sin definir',
     };
     return (
       <form className="Modificar" onSubmit={this.handleForm}>
+        {/*Componente que contiene el buscador de documento para rellenar los inputs*/}
         <SearchCotiOrder
           handleOptions={this.handleOptions}
           placeholder={this.state.options}
         />
+        {/*Reemplazar con el reusable Title*/}
         <h1 className="actual">{`Actual ${this.state.options}`}</h1>
         <h1 className="nuevo">{`Nueva ${this.state.options}`}</h1>
+        {/*Datos Generales*/}
         <ModificarOptions/>
         {this.state.options == 'Cotización' ?
           <RelativeOptions
@@ -72,6 +82,7 @@ class Modificar extends Component {
             handleReferences={this.handleReferences}
           />
         }
+        {/*Datos Generales*/}
         <ModificarOptions/>
         {this.state.options == 'Cotización' ?
           <RelativeOptions
@@ -84,6 +95,8 @@ class Modificar extends Component {
             handleReferences={this.handleReferences}
           />
         }
+        {/*Manejador de los detalles de producto*/}
+        {/*Empaqueter en un componente*/}
         <LayoutDiv
           class="DetalleLayout"
         >

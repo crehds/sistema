@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../css/arrowcontainer.css';
 
+/*Manejador de botones para interactuar con los detalles de producto*/
 class ArrowContainer extends Component {
   render() {
     return (

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../css/button-container.css';
 
+/*Botones maestros para permitir al usuario verificar sus cambios y ejecutarlos*/
 class ButtonsContainer extends Component {
   render() {
     return (

@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react';
 
+/*Muestra las opciones dependiendo del documento Cotización o Orden de compra*/
 class RelativeOptions extends PureComponent {
   state = {
     data: [],
@@ -18,7 +19,7 @@ class RelativeOptions extends PureComponent {
     return (
       <div className="modificaroptions-container">
       {options.map((e, i) => (
-        <div className="modificar-detail">
+        <div className="modificar-detail" key={i}>
           <p>{keys[i]}</p>
           <input
             key={i}
