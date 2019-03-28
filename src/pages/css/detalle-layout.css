@@ -1,0 +1,7 @@
+.DetalleLayout {
+  grid-column: 1 / -1;
+  grid-row: 4 / -1;
+  display: grid;
+  grid-template-columns: 4fr 1fr 4fr;
+  /* justify-items: center; */
+}
