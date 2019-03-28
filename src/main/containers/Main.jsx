@@ -13,7 +13,7 @@ class Main extends Component {
 
   state = {
     //modificar a true si se desea obviar el loggin al debugear
-    isLogging: false,
+    isLogging: true,
   };
 
   /*El componente Main tendrá una segunda clase que se modificará dependiendo

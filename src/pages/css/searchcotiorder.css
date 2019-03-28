@@ -1,0 +1,28 @@
+.SearchCotiOrder {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: nowrap;
+  text-align: left;
+  padding: 2px;
+  justify-content: center;
+  align-items: center;
+}
+
+.SearchCotiOrder p {
+  margin: 0;
+}
+.SearchCotiOrder select {
+  height: 20px;
+}
+
+.SearchCotiOrder-input {
+  padding: 0;
+  padding-left: 9px;
+  width: 200px;
+  margin-left: 5px;
+  height: 23px
+}
+
+.SearchCotiOrder-button {
+  margin-left: 5px;
+}

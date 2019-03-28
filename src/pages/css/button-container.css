@@ -1,0 +1,20 @@
+.Button-container {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+.Button-container button{
+  font-size: 18px;
+  color: rgba(160,160,160,.8);
+  border: 2px groove rgba(205,205,205,.8);
+  border-radius: 5px;
+}
+
+.Button-container button:hover {
+  cursor: pointer;
+  color: #0F0C0C;
+}
