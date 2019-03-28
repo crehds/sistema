@@ -145,7 +145,7 @@
                 "class": "option-form",
                 "description": "Orden de Compra",
                 "inputs": {
-                  "Condicionde pago": "Mínimo una semana",
+                  "Condicion de pago": "Mínimo una semana",
                   "monedaYTc": "pesos o dólares",
                   "Lugar de entrega": "Lugar de entrega",
                   "Plazo de entrega": "Máximo 30 días",

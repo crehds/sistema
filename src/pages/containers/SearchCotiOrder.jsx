@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../css/searchcotiorder.css';
 
+/*Combobox maestro*/
 class SearchCotiOrder extends Component {
   render() {
     return (
